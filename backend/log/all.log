@@ -249,3 +249,257 @@
 2018-05-02 04:40:00,117 [Thread-11:123145312813056] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/info/login HTTP/1.1" 405 11733
 2018-05-02 04:40:04,563 [Thread-12:123145312813056] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/info/login HTTP/1.1" 405 11733
 2018-05-02 04:40:11,913 [Thread-13:123145312813056] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/info/is_token_valid HTTP/1.1" 405 11752
+2018-05-02 14:03:10,455 [Thread-1:8732] [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2023
+2018-05-02 14:03:10,937 [Thread-3:9092] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2074
+2018-05-02 14:03:14,941 [Thread-4:7736] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/ HTTP/1.1" 404 9267
+2018-05-02 14:03:24,655 [Thread-5:1684] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/login HTTP/1.1" 405 11703
+2018-05-02 14:03:36,106 [Thread-7:11192] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:03:36,214 [Thread-7:11192] [django:188] [views:post] [INFO]- login failed
+2018-05-02 14:03:36,245 [Thread-7:11192] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:03:59,286 [Thread-8:6792] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/register HTTP/1.1" 404 9219
+2018-05-02 14:04:07,960 [Thread-9:7980] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/register_admin HTTP/1.1" 403 8078
+2018-05-02 14:04:19,571 [Thread-14:5892] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/register_student HTTP/1.1" 403 8088
+2018-05-02 14:04:26,383 [Thread-19:1888] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/login HTTP/1.1" 405 11703
+2018-05-02 14:04:39,245 [Thread-23:9392] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:04:39,374 [Thread-23:9392] [django:188] [views:post] [INFO]- login failed
+2018-05-02 14:04:39,413 [Thread-23:9392] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:15:29,955 [Thread-1:3268] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:15:30,061 [Thread-1:3268] [django:188] [views:post] [INFO]- login failed
+2018-05-02 14:15:30,124 [Thread-1:3268] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:15:34,360 [Thread-3:8408] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:15:34,485 [Thread-3:8408] [django:188] [views:post] [INFO]- login failed
+2018-05-02 14:15:34,520 [Thread-3:8408] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:16:46,651 [Thread-4:10532] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:16:46,755 [Thread-4:10532] [django:188] [views:post] [INFO]- login failed
+2018-05-02 14:16:46,784 [Thread-4:10532] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:18:58,391 [Thread-1:1700] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/login HTTP/1.1" 405 11703
+2018-05-02 14:19:05,770 [Thread-3:9952] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:19:05,884 [Thread-3:9952] [django:188] [views:post] [INFO]- login failed
+2018-05-02 14:19:05,918 [Thread-3:9952] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:26:06,349 [Thread-1:3584] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:26:06,458 [Thread-1:3584] [django:189] [views:post] [INFO]- login failed
+2018-05-02 14:26:06,524 [Thread-1:3584] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:33:32,841 [Thread-1:524] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:33:32,960 [Thread-1:524] [django:189] [views:post] [INFO]- login failed
+2018-05-02 14:33:33,035 [Thread-1:524] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:40:05,682 [Thread-1:3172] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:40:05,686 [Thread-1:3172] [django:196] [views:post] [INFO]- login failed
+2018-05-02 14:40:05,760 [Thread-1:3172] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 400 11705
+2018-05-02 14:40:14,716 [Thread-2:8676] [django:166] [views:post] [INFO]- try to login
+2018-05-02 14:40:14,831 [Thread-2:8676] [django:190] [views:post] [INFO]- login failed
+2018-05-02 14:40:14,861 [Thread-2:8676] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-02 14:49:33,659 [Thread-1:11156] [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2142
+2018-05-02 14:49:37,904 [Thread-7:2376] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin HTTP/1.1" 301 0
+2018-05-02 14:49:37,938 [Thread-8:10492] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin/ HTTP/1.1" 302 0
+2018-05-02 14:49:37,989 [Thread-9:7232] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1856
+2018-05-02 14:49:38,008 [Thread-11:4952] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+2018-05-02 14:49:38,010 [Thread-10:10776] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+2018-05-02 14:49:38,019 [Thread-12:5152] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+2018-05-02 14:49:38,133 [Thread-13:1284] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2018-05-02 14:49:38,155 [Thread-14:10580] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+2018-05-02 14:49:38,181 [Thread-15:8712] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+2018-05-02 14:49:45,307 [Thread-16:1436] [django.server:124] [basehttp:log_message] [INFO]- "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2017
+2018-05-02 14:49:45,405 [Thread-17:10432] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+2018-05-02 14:51:18,122 [Thread-1:8704] [django.server:124] [basehttp:log_message] [INFO]- "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2017
+2018-05-02 14:53:59,970 [Thread-1:10696] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1856
+2018-05-02 14:54:00,854 [Thread-2:10344] [django.server:124] [basehttp:log_message] [INFO]- "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1856
+2018-05-02 14:54:06,138 [Thread-8:6796] [django.server:124] [basehttp:log_message] [INFO]- "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2017
+2018-05-02 14:57:24,494 [Thread-1:10076] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 14347
+2018-05-02 15:02:42,840 [MainThread:10328] [django.security.DisallowedHost:74] [exception:response_for_exception] [ERROR]- Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+2018-05-02 15:02:42,880 [MainThread:10328] [django.security.DisallowedHost:74] [exception:response_for_exception] [ERROR]- Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+2018-05-02 15:03:17,147 [Thread-7:7804] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15788
+2018-05-02 15:10:58,356 [Thread-13:8728] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 14450
+2018-05-02 15:12:52,448 [Thread-19:2344] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 14967
+2018-05-02 15:16:11,884 [Thread-25:11048] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15478
+2018-05-02 15:19:09,968 [Thread-31:11016] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15478
+2018-05-02 15:21:14,823 [Thread-37:10072] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15478
+2018-05-02 15:21:25,908 [Thread-1:10892] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15478
+2018-05-02 15:21:26,800 [Thread-2:8868] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15478
+2018-05-02 15:21:36,358 [Thread-9:8408] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/1 HTTP/1.1" 301 0
+2018-05-02 15:21:36,425 [Thread-8:9660] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/1/ HTTP/1.1" 200 17566
+2018-05-02 15:21:46,321 [Thread-14:10936] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/2/ HTTP/1.1" 200 17564
+2018-05-02 15:52:53,386 [Thread-1:8944] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/2/ HTTP/1.1" 200 17564
+2018-05-02 15:52:54,139 [Thread-2:8228] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/2/ HTTP/1.1" 200 17564
+2018-05-02 15:52:58,321 [Thread-7:4788] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15478
+2018-05-02 15:53:03,068 [Thread-8:6932] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination HTTP/1.1" 404 13090
+2018-05-02 15:53:56,603 [Thread-1:10792] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination HTTP/1.1" 301 0
+2018-05-02 15:53:56,715 [Thread-2:10812] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 14613
+2018-05-02 15:53:56,739 [Thread-3:10156] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-05-02 15:58:29,788 [Thread-7:10868] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/online_testing/examination/ HTTP/1.1" 400 14898
+2018-05-02 15:59:22,368 [Thread-1:4516] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/online_testing/examination/ HTTP/1.1" 201 14890
+2018-05-02 15:59:33,136 [Thread-2:3024] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1 HTTP/1.1" 301 0
+2018-05-02 15:59:33,164 [Thread-3:10476] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/ HTTP/1.1" 200 10237
+2018-05-02 15:59:38,290 [Thread-4:8508] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/1/start_time HTTP/1.1" 404 16087
+2018-05-02 15:59:51,106 [Thread-10:8096] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time HTTP/1.1" 301 0
+2018-05-02 15:59:51,132 [Thread-11:10412] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 400 10226
+2018-05-02 16:00:26,404 [Thread-14:4576] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/conservation HTTP/1.1" 301 0
+2018-05-02 16:00:26,433 [Thread-15:9660] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/conservation/ HTTP/1.1" 200 10240
+2018-05-02 16:00:31,038 [Thread-16:8680] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/conservation/ HTTP/1.1" 200 10240
+2018-05-02 16:00:33,691 [Thread-17:9332] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/conservation/ HTTP/1.1" 200 10240
+2018-05-02 16:00:41,156 [Thread-22:3012] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/ HTTP/1.1" 200 10237
+2018-05-02 16:00:54,123 [Thread-1:2236] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/conservation/ HTTP/1.1" 200 10240
+2018-05-02 16:00:57,205 [Thread-2:524] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/1/conservation/ HTTP/1.1" 400 10245
+2018-05-02 16:00:59,682 [Thread-3:520] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/ HTTP/1.1" 200 10236
+2018-05-02 16:01:04,899 [Thread-6:11156] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 500 97560
+2018-05-02 16:02:36,870 [Thread-1:10144] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 500 98078
+2018-05-02 16:02:37,710 [Thread-2:11056] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 500 98078
+2018-05-02 16:03:32,026 [Thread-1:9804] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 500 97959
+2018-05-02 16:03:32,881 [Thread-2:10860] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 500 97959
+2018-05-02 16:04:10,959 [Thread-1:1888] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 500 97981
+2018-05-02 16:04:11,708 [Thread-2:9504] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 500 97981
+2018-05-02 16:05:17,412 [Thread-1:9400] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:19,453 [Thread-2:4936] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:20,071 [Thread-3:9728] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:20,790 [Thread-4:5956] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:21,341 [Thread-5:2540] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:21,842 [Thread-10:5888] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:22,388 [Thread-11:10124] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:22,919 [Thread-12:5800] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:23,430 [Thread-13:7732] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:23,949 [Thread-14:948] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:24,547 [Thread-15:10628] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:25,014 [Thread-16:9224] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:25,478 [Thread-17:8680] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:05:25,988 [Thread-18:9332] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:06:56,231 [Thread-1:596] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 500 97158
+2018-05-02 16:07:27,868 [Thread-1:8232] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:07:29,684 [Thread-2:10336] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:30,244 [Thread-3:9036] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:31,115 [Thread-4:5784] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:31,369 [Thread-5:5924] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:31,581 [Thread-10:3604] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:31,812 [Thread-11:9840] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:31,967 [Thread-12:8384] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:32,172 [Thread-13:8832] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:32,363 [Thread-14:9564] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:32,495 [Thread-15:4796] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:32,636 [Thread-16:3928] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:32,795 [Thread-17:10692] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:32,964 [Thread-18:10084] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:33,099 [Thread-19:1684] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10183
+2018-05-02 16:07:33,300 [Thread-20:11152] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:07:33,490 [Thread-21:11260] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:33,632 [Thread-22:5256] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:33,791 [Thread-23:6488] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:33,988 [Thread-24:10824] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:07:34,136 [Thread-25:10684] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:34,309 [Thread-26:8456] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:34,479 [Thread-27:10228] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:34,643 [Thread-28:5928] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:34,819 [Thread-29:760] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:35,007 [Thread-30:6120] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:36,122 [Thread-31:816] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:36,288 [Thread-32:6040] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:07:36,438 [Thread-33:600] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:11:58,473 [Thread-34:9252] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:11:59,058 [Thread-35:1280] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:11:59,738 [Thread-36:9120] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:11:59,883 [Thread-37:2380] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:00,186 [Thread-38:520] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:00,419 [Thread-39:11120] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:00,560 [Thread-40:11156] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:12:00,872 [Thread-41:8988] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:01,017 [Thread-42:10756] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:01,180 [Thread-43:9148] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:01,317 [Thread-44:10184] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:01,475 [Thread-45:780] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10175
+2018-05-02 16:12:01,816 [Thread-46:4424] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:01,943 [Thread-47:8940] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:02,281 [Thread-48:4392] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:02,411 [Thread-49:8032] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:02,561 [Thread-50:10048] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:02,720 [Thread-51:9232] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:02,866 [Thread-52:2324] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:03,026 [Thread-53:8916] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:03,219 [Thread-54:9512] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:03,549 [Thread-55:9368] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:03,665 [Thread-56:9700] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:03,833 [Thread-57:8692] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:04,025 [Thread-58:8828] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:04,166 [Thread-59:10720] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:04,338 [Thread-60:9860] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:04,540 [Thread-61:8488] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:04,726 [Thread-62:5156] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:04,859 [Thread-63:11208] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:05,041 [Thread-64:8924] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:05,178 [Thread-65:6088] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:05,310 [Thread-66:8248] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10183
+2018-05-02 16:12:05,509 [Thread-67:6440] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:05,665 [Thread-68:11184] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:05,831 [Thread-69:10508] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:05,993 [Thread-70:9292] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:06,514 [Thread-71:9600] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:06,673 [Thread-72:9040] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:06,864 [Thread-73:5264] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:07,014 [Thread-74:9468] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:07,345 [Thread-75:10788] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:07,536 [Thread-76:6976] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:07,684 [Thread-77:3584] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:07,829 [Thread-78:7628] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:07,982 [Thread-79:8552] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:08,152 [Thread-80:9768] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:08,291 [Thread-81:10192] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:08,475 [Thread-82:4436] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:08,742 [Thread-83:196] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:10,850 [Thread-84:2428] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:10,993 [Thread-85:10996] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:11,168 [Thread-86:460] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 16:12:11,344 [Thread-87:9520] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1/left_time/ HTTP/1.1" 200 10176
+2018-05-02 20:40:58,204 [Thread-1:9248] [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2142
+2018-05-02 20:40:58,668 [Thread-2:7532] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2193
+2018-05-02 20:41:04,150 [Thread-3:8504] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15788
+2018-05-02 20:41:07,012 [Thread-4:2076] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 10124
+2018-05-02 20:41:10,818 [Thread-5:9164] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/admin/ HTTP/1.1" 403 9355
+2018-05-02 20:41:45,711 [Thread-12:3080] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/student/ HTTP/1.1" 403 9377
+2018-05-02 20:41:54,369 [Thread-13:7472] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 10124
+2018-05-02 20:41:59,588 [Thread-19:1404] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/get HTTP/1.1" 404 9323
+2018-05-02 20:42:04,659 [Thread-20:8400] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/get_token HTTP/1.1" 405 12055
+2018-05-02 20:42:17,057 [Thread-25:8468] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/get_token HTTP/1.1" 400 12095
+2018-05-02 20:42:27,818 [Thread-26:9572] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/get_token HTTP/1.1" 400 12095
+2018-05-02 20:46:45,663 [Thread-27:5736] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/get_token HTTP/1.1" 400 12095
+2018-05-02 20:47:16,758 [Thread-28:7164] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-02 20:47:20,050 [Thread-29:9136] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/get_token HTTP/1.1" 400 12095
+2018-05-02 20:47:20,318 [Thread-30:6640] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-02 20:51:39,255 [Thread-31:1812] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/get_token HTTP/1.1" 200 12183
+2018-05-02 20:52:06,621 [Thread-32:5448] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/login HTTP/1.1" 405 11703
+2018-05-02 20:52:15,015 [Thread-33:7596] [django:166] [views:post] [INFO]- try to login
+2018-05-02 20:52:15,528 [Thread-33:7596] [django:178] [views:post] [INFO]- login successfully
+2018-05-02 20:52:15,663 [Thread-33:7596] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login HTTP/1.1" 200 11777
+2018-05-02 21:02:18,030 [Thread-1:5592] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 10157
+2018-05-02 21:02:18,788 [Thread-2:9336] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 10157
+2018-05-02 21:02:20,876 [Thread-7:6300] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:02:32,397 [Thread-8:2616] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-02 21:02:38,778 [Thread-9:8640] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:02:39,026 [Thread-10:9944] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-02 21:04:42,320 [Thread-11:4444] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:04:43,208 [Thread-12:2180] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:04:43,820 [Thread-13:8896] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:04:44,475 [Thread-14:6616] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:07:15,277 [Thread-15:9828] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:07:16,046 [Thread-16:7888] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:07:16,571 [Thread-17:6520] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:07:22,537 [Thread-18:2028] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-02 21:07:25,849 [Thread-19:828] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/admin/ HTTP/1.1" 200 14476
+2018-05-02 21:07:26,152 [Thread-20:3688] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-02 21:20:47,231 [Thread-1:7860] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15821
+2018-05-02 21:20:47,569 [Thread-2:948] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-02 21:22:23,748 [Thread-1:7468] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15821
+2018-05-02 21:22:30,061 [Thread-2:516] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15821
+2018-05-02 21:23:02,316 [Thread-1:112] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/ HTTP/1.1" 500 100502
+2018-05-02 22:00:00,783 [MainThread:3044] [django:166] [views:post] [INFO]- try to login
+2018-05-02 22:00:01,183 [MainThread:3044] [django:178] [views:post] [INFO]- login successfully
+2018-05-02 22:00:12,736 [MainThread:8792] [django:166] [views:post] [INFO]- try to login
+2018-05-02 22:00:13,116 [MainThread:8792] [django:178] [views:post] [INFO]- login successfully
+2018-05-02 22:12:26,278 [Thread-1:9984] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15821
+2018-05-02 22:15:34,490 [Thread-5:8716] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/ HTTP/1.1" 200 10184
+2018-05-02 22:15:35,196 [Thread-6:9828] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testin HTTP/1.1" 404 9353
+2018-05-02 22:15:53,797 [Thread-12:9108] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15821
+2018-05-02 22:20:16,760 [Thread-17:6496] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/1 HTTP/1.1" 301 0
+2018-05-02 22:20:16,837 [Thread-18:1664] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/1/ HTTP/1.1" 200 16486
+2018-05-02 22:20:37,728 [Thread-22:8456] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/ HTTP/1.1" 200 10184
+2018-05-02 22:20:39,186 [Thread-23:9976] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15511
+2018-05-02 22:21:31,339 [Thread-29:5692] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/1/ HTTP/1.1" 200 17599
+2018-05-02 22:22:15,337 [Thread-41:9640] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/2/ HTTP/1.1" 200 17597
+2018-05-02 22:23:52,223 [Thread-47:4212] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/1 HTTP/1.1" 301 0
+2018-05-02 22:23:52,267 [Thread-48:9360] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/1/ HTTP/1.1" 404 10089
+2018-05-02 22:23:57,888 [Thread-49:312] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 14373

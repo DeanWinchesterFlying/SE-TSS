@@ -28,12 +28,14 @@ SECRET_KEY = 'r@bp4_$%=vm@f5l0a^z$$$&y@)l0x=ne3-rcdzbc=nka15^&+d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
     # 'LogIn.apps.LoginConfig',
+    'online_testing.apps.OnlineTestingConfig',
+    'django_filters',
     'authentication.apps.AuthenticationConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -63,6 +65,8 @@ WEBPACK_LOADER = {
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
     }
 }
+
+
 
 # TODO
 '''

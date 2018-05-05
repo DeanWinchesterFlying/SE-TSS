@@ -169,7 +169,10 @@ class Login(APIView):
             data = request.data
             username = data.get('username', None)
             password = data.get('password', None)
+            print(username)
+            print(password)
             account = auth.authenticate(username=username, password=password)
+            print(account)
             if account is not None:
                 auth.login(request, account)
                 logger.info("login successfully")

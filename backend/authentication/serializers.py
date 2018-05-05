@@ -7,6 +7,7 @@ from rest_framework.exceptions import APIException, ParseError, NotFound
 import logging
 logger = logging.getLogger('django')
 
+
 class PeopleSerializer(serializers.ModelSerializer):
     username = serializers.CharField(max_length=50, required=True)
     id_number = serializers.CharField(max_length=18, required=True)
