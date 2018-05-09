@@ -865,3 +865,1713 @@ KeyError: 0
 2018-05-02 22:23:52,267 [Thread-48:9360] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/examination/1/
 2018-05-02 22:23:52,267 [Thread-48:9360] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/1/ HTTP/1.1" 404 10089
 2018-05-02 22:23:57,888 [Thread-49:312] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 14373
+2018-05-05 08:54:20,953 [MainThread:3264] [django:166] [views:post] [INFO]- try to login
+2018-05-05 08:54:21,078 [MainThread:3264] [django:191] [views:post] [INFO]- login failed
+2018-05-05 08:54:21,082 [MainThread:3264] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\backends\sqlite3\base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: online_testing_question.course_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 35, in create
+    return super(QuestionViewSet, self).create(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 940, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\backends\sqlite3\base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: online_testing_question.course_id
+2018-05-05 08:56:21,468 [Thread-1:8588] [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2018-05-05 08:56:21,468 [Thread-1:8588] [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2142
+2018-05-05 08:56:21,892 [Thread-2:1000] [django.request:93] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-05-05 08:56:21,908 [Thread-2:1000] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2193
+2018-05-05 08:56:30,569 [Thread-3:8300] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 14347
+2018-05-05 08:56:30,593 [Thread-4:8996] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-05-05 08:56:30,597 [Thread-6:7196] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-05-05 08:56:30,597 [Thread-5:9160] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-05-05 08:56:30,601 [Thread-7:4052] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-05-05 08:56:30,605 [Thread-8:9200] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-05-05 08:56:30,617 [Thread-9:4092] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-05-05 08:56:30,621 [Thread-10:6784] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-05-05 08:56:30,625 [Thread-11:4592] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-05-05 08:56:30,629 [Thread-12:3812] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-05-05 08:56:30,629 [Thread-13:6768] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-05-05 08:56:30,693 [Thread-14:8528] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-05-05 08:56:34,132 [Thread-15:6880] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 10124
+2018-05-05 08:56:40,501 [Thread-16:2656] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 14347
+2018-05-05 08:57:29,962 [Thread-1:9044] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 14905
+2018-05-05 08:57:45,715 [Thread-7:7196] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 10124
+2018-05-05 08:57:47,634 [Thread-8:9160] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/course/ HTTP/1.1" 403 9366
+2018-05-05 08:59:10,245 [Thread-1:4588] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/login HTTP/1.1" 405 11703
+2018-05-05 08:59:15,109 [Thread-2:1264] [django:166] [views:post] [INFO]- try to login
+2018-05-05 08:59:15,445 [Thread-2:1264] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 08:59:15,645 [Thread-2:1264] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login HTTP/1.1" 200 11777
+2018-05-05 08:59:20,577 [Thread-7:6748] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/c
+2018-05-05 08:59:20,580 [Thread-7:6748] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/c HTTP/1.1" 404 9317
+2018-05-05 08:59:24,653 [Thread-8:8956] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/course HTTP/1.1" 301 0
+2018-05-05 08:59:24,761 [Thread-9:6724] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/course/ HTTP/1.1" 200 14466
+2018-05-05 09:04:07,644 [Thread-14:7184] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/teacher
+2018-05-05 09:04:07,648 [Thread-14:7184] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/teacher HTTP/1.1" 404 9335
+2018-05-05 09:04:15,644 [Thread-15:8672] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/^register_faculty
+2018-05-05 09:04:15,644 [Thread-15:8672] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/%5Eregister_faculty HTTP/1.1" 404 9367
+2018-05-05 09:04:18,629 [Thread-20:4716] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/register_faculty HTTP/1.1" 405 13515
+2018-05-05 09:05:10,965 [MainThread:9168] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:05:11,522 [MainThread:9168] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:05:19,757 [Thread-23:6804] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/course/ HTTP/1.1" 200 14799
+2018-05-05 09:05:58,240 [Thread-27:1624] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15040
+2018-05-05 09:07:20,710 [MainThread:5912] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:07:21,040 [MainThread:5912] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:07:23,975 [Thread-32:9148] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15040
+2018-05-05 09:07:25,100 [Thread-33:1664] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15040
+2018-05-05 09:07:45,354 [MainThread:6768] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:07:45,684 [MainThread:6768] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:09:11,868 [MainThread:4860] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:09:12,178 [MainThread:4860] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:10:43,046 [MainThread:2556] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:10:43,376 [MainThread:2556] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:10:55,919 [MainThread:8548] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:10:56,259 [MainThread:8548] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:11:01,050 [Thread-1:4800] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16728
+2018-05-05 09:12:55,309 [Thread-3:7380] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16720
+2018-05-05 09:12:57,168 [Thread-2:5756] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16720
+2018-05-05 09:12:58,144 [Thread-1:2696] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16720
+2018-05-05 09:12:58,936 [Thread-4:4192] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16720
+2018-05-05 09:12:59,884 [Thread-5:7832] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16720
+2018-05-05 09:13:01,762 [Thread-6:9116] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16720
+2018-05-05 09:13:23,214 [Thread-1:6096] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 46, in list
+    return Response({'question_list': serializer.data})
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 1121, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'teacher_name' was declared on serializer QuestionSerializer, but has not been included in the 'fields' option.
+2018-05-05 09:13:23,406 [Thread-1:6096] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/ HTTP/1.1" 500 148373
+2018-05-05 09:13:40,006 [Thread-2:2104] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16604
+2018-05-05 09:14:59,601 [Thread-1:1352] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 46, in list
+    return Response({'question_list': serializer.data})
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\functional.py", line 36, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 1020, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 1121, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'course_name' was declared on serializer QuestionSerializer, but has not been included in the 'fields' option.
+2018-05-05 09:14:59,753 [Thread-1:1352] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/ HTTP/1.1" 500 147745
+2018-05-05 09:15:21,552 [Thread-1:8592] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16734
+2018-05-05 09:17:58,988 [MainThread:9044] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:17:59,308 [MainThread:9044] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:18:27,348 [MainThread:4116] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:18:27,659 [MainThread:4116] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:18:32,787 [Thread-1:1460] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 16277
+2018-05-05 09:19:06,497 [Thread-8:7356] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/37015218-5002-11e8-99ce-c48e8f7f190e HTTP/1.1" 301 0
+2018-05-05 09:19:06,591 [Thread-9:8920] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/37015218-5002-11e8-99ce-c48e8f7f190e/ HTTP/1.1" 200 18765
+2018-05-05 09:35:01,774 [Thread-14:2768] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/paper/1/
+2018-05-05 09:35:01,774 [Thread-14:2768] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/paper/1/ HTTP/1.1" 404 16417
+2018-05-05 09:35:04,821 [Thread-15:5188] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/37015218-5002-11e8-99ce-c48e8f7f190e/ HTTP/1.1" 200 18765
+2018-05-05 09:39:33,075 [Thread-1:4060] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/37015218-5002-11e8-99ce-c48e8f7f190e/ HTTP/1.1" 200 18765
+2018-05-05 09:39:37,437 [Thread-2:1348] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15130
+2018-05-05 09:42:07,606 [Thread-1:2696] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 16277
+2018-05-05 09:42:59,817 [Thread-8:9128] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16734
+2018-05-05 09:43:02,468 [Thread-9:8388] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/1 HTTP/1.1" 301 0
+2018-05-05 09:43:02,544 [Thread-10:6872] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/1/ HTTP/1.1" 200 17313
+2018-05-05 09:43:08,203 [Thread-11:5456] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16734
+2018-05-05 09:44:40,770 [Thread-17:8052] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/ HTTP/1.1" 200 10157
+2018-05-05 09:45:26,218 [Thread-23:4604] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/student/ HTTP/1.1" 200 15287
+2018-05-05 09:45:33,237 [Thread-24:4444] [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2018-05-05 09:45:33,241 [Thread-24:4444] [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2142
+2018-05-05 09:45:40,675 [Thread-25:5792] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/s
+2018-05-05 09:45:40,675 [Thread-25:5792] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/s HTTP/1.1" 404 9317
+2018-05-05 09:45:52,012 [Thread-30:2956] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/register_student HTTP/1.1" 405 14001
+2018-05-05 09:47:21,277 [Thread-33:5624] [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2018-05-05 09:47:21,277 [Thread-33:5624] [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2142
+2018-05-05 09:47:29,862 [Thread-34:1900] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/department
+2018-05-05 09:47:29,862 [Thread-34:1900] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/department HTTP/1.1" 404 9344
+2018-05-05 09:53:44,150 [Thread-37:6952] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/student HTTP/1.1" 301 0
+2018-05-05 09:53:44,242 [Thread-38:1380] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/student/ HTTP/1.1" 200 15287
+2018-05-05 09:54:21,426 [MainThread:6304] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:54:21,766 [MainThread:6304] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:54:21,876 [MainThread:6304] [django:27] [views:post] [INFO]- try to register student account
+2018-05-05 09:54:21,896 [MainThread:6304] [django:29] [serializers:create] [INFO]- create account
+2018-05-05 09:54:22,246 [MainThread:6304] [django:31] [views:post] [INFO]- account register successfully, username:Ben
+2018-05-05 09:54:22,256 [MainThread:6304] [django:27] [views:post] [INFO]- try to register student account
+2018-05-05 09:54:22,266 [MainThread:6304] [django:29] [serializers:create] [INFO]- create account
+2018-05-05 09:54:22,486 [MainThread:6304] [django:31] [views:post] [INFO]- account register successfully, username:Mary
+2018-05-05 09:54:22,496 [MainThread:6304] [django:44] [views:post] [INFO]- try to register faculty account
+2018-05-05 09:54:22,506 [MainThread:6304] [django:52] [views:post] [INFO]- account register failed, invalid parameters
+2018-05-05 09:54:36,884 [Thread-40:3184] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/student/ HTTP/1.1" 200 16361
+2018-05-05 09:54:53,510 [Thread-44:1380] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/faculty HTTP/1.1" 301 0
+2018-05-05 09:54:53,582 [Thread-45:5168] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/faculty/ HTTP/1.1" 200 14730
+2018-05-05 09:56:24,033 [MainThread:3276] [django:166] [views:post] [INFO]- try to login
+2018-05-05 09:56:24,363 [MainThread:3276] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 09:56:24,463 [MainThread:3276] [django:44] [views:post] [INFO]- try to register faculty account
+2018-05-05 09:56:24,483 [MainThread:3276] [django:29] [serializers:create] [INFO]- create account
+2018-05-05 09:56:24,933 [MainThread:3276] [django:48] [views:post] [INFO]- account register successfully, username:Yue
+2018-05-05 09:56:32,066 [Thread-48:8348] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/faculty/ HTTP/1.1" 200 15183
+2018-05-05 09:56:51,256 [Thread-53:872] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/student/ HTTP/1.1" 200 16361
+2018-05-05 09:57:27,156 [Thread-58:8300] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/faculty/ HTTP/1.1" 200 15183
+2018-05-05 09:59:05,379 [Thread-63:928] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16827
+2018-05-05 09:59:10,927 [Thread-64:4716] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/1/ HTTP/1.1" 200 17406
+2018-05-05 09:59:16,137 [Thread-68:9204] [django.server:124] [basehttp:log_message] [INFO]- "PUT /api/online_testing/question/1/ HTTP/1.1" 200 17298
+2018-05-05 09:59:21,247 [Thread-71:5040] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/2 HTTP/1.1" 301 0
+2018-05-05 09:59:21,324 [Thread-72:8600] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/2/ HTTP/1.1" 200 18128
+2018-05-05 09:59:24,820 [Thread-73:3984] [django.server:124] [basehttp:log_message] [INFO]- "PUT /api/online_testing/question/2/ HTTP/1.1" 200 17708
+2018-05-05 10:01:12,265 [Thread-77:8528] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/question/2/
+2018-05-05 10:01:12,269 [Thread-77:8528] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/2/ HTTP/1.1" 404 16577
+2018-05-05 10:01:14,949 [Thread-78:2952] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 15192
+2018-05-05 10:01:29,330 [MainThread:5424] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:01:29,670 [MainThread:5424] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:01:30,289 [MainThread:5424] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/paper/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 91, in create
+    question = Question.objects.get(question_id=question_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+online_testing.models.DoesNotExist: Question matching query does not exist.
+2018-05-05 10:01:52,965 [Thread-84:2292] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16849
+2018-05-05 10:02:00,828 [Thread-85:9092] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15665
+2018-05-05 10:02:13,878 [Thread-92:1460] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16849
+2018-05-05 10:03:21,432 [Thread-99:1380] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15313
+2018-05-05 10:39:00,525 [Thread-1:1380] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15313
+2018-05-05 10:40:22,261 [Thread-7:5852] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/lg
+2018-05-05 10:40:22,269 [Thread-7:5852] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/lg HTTP/1.1" 404 9320
+2018-05-05 10:40:25,395 [Thread-8:928] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/login HTTP/1.1" 405 11736
+2018-05-05 10:40:30,232 [Thread-9:7628] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:40:30,597 [Thread-9:7628] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:40:30,781 [Thread-9:7628] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login HTTP/1.1" 200 11776
+2018-05-05 10:40:39,451 [Thread-13:4724] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-05 10:40:42,596 [Thread-14:8408] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15312
+2018-05-05 10:43:59,305 [Thread-20:7440] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-05 10:44:21,475 [Thread-21:5736] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 158, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = response.render()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\renderers.py", line 656, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\renderers.py", line 550, in get_raw_data_form
+    if not self.show_form_for_method(view, method, request, instance):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\renderers.py", line 442, in show_form_for_method
+    view.check_object_permissions(request, obj)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 333, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "D:\tss\SE-TSS\backend\online_testing\permissions.py", line 8, in has_object_permission
+    if request.user.username == obj.username.username:
+AttributeError: 'Examination' object has no attribute 'username'
+2018-05-05 10:44:21,677 [Thread-21:5736] [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/online_testing/examination/ HTTP/1.1" 500 111737
+2018-05-05 10:45:06,342 [Thread-1:9160] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/online_testing/examination/ HTTP/1.1" 201 9990
+2018-05-05 10:45:49,930 [Thread-2:2360] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e HTTP/1.1" 301 0
+2018-05-05 10:45:49,974 [Thread-3:4556] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 403 10294
+2018-05-05 10:46:25,648 [Thread-8:8616] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 403 10294
+2018-05-05 10:47:31,618 [Thread-1:2104] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 403 10294
+2018-05-05 10:48:37,065 [Thread-1:7832] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 403 10294
+2018-05-05 10:49:04,442 [Thread-1:8864] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 403 10294
+2018-05-05 10:49:36,304 [Thread-6:1552] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 10:50:01,204 [Thread-1:6892] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 403 10294
+2018-05-05 10:50:42,319 [Thread-2:9160] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 136, in retrieve
+    return super(ExaminationViewSet, self).retrieve(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\generics.py", line 101, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 333, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "D:\tss\SE-TSS\backend\online_testing\permissions.py", line 7, in has_object_permission
+    print(request.user.username, type(request.user.username))
+TypeError: 'int' object is not callable
+2018-05-05 10:50:42,441 [Thread-2:9160] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 500 115732
+2018-05-05 10:51:05,428 [Thread-1:700] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 403 10294
+2018-05-05 10:51:31,806 [Thread-1:1900] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 10:52:11,620 [MainThread:8772] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:52:11,985 [MainThread:8772] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:52:12,105 [MainThread:8772] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to testserver/api/online_testing/examination/info/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-05-05 10:52:21,946 [MainThread:5952] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:52:22,456 [MainThread:5952] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:52:22,626 [MainThread:5952] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2018-05-05 10:53:49,599 [MainThread:2068] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:53:49,939 [MainThread:2068] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:53:50,101 [MainThread:2068] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2018-05-05 10:53:57,425 [Thread-6:8272] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 16180
+2018-05-05 10:54:10,211 [Thread-11:3108] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 10:55:35,952 [Thread-16:4556] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/
+2018-05-05 10:55:35,954 [Thread-16:4556] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/5163ef10-500e-11e8-8b1c-c48e8f7f190e/ HTTP/1.1" 404 10298
+2018-05-05 10:55:39,689 [Thread-17:7512] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15746
+2018-05-05 10:55:52,965 [MainThread:1872] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:55:53,324 [MainThread:1872] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:55:53,464 [MainThread:1872] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2018-05-05 10:56:19,935 [MainThread:5560] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:56:20,465 [MainThread:5560] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:56:20,595 [MainThread:5560] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2018-05-05 10:56:34,244 [MainThread:6768] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:56:34,584 [MainThread:6768] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:56:34,724 [MainThread:6768] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2018-05-05 10:57:16,197 [Thread-22:700] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 10:58:10,201 [Thread-27:3828] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/3a29d182-5008-11e8-98c8-c48e8f7f190e HTTP/1.1" 301 0
+2018-05-05 10:58:10,337 [Thread-28:5524] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/3a29d182-5008-11e8-98c8-c48e8f7f190e/ HTTP/1.1" 200 18786
+2018-05-05 10:58:13,655 [Thread-29:3048] [django.server:124] [basehttp:log_message] [INFO]- "DELETE /api/online_testing/paper/3a29d182-5008-11e8-98c8-c48e8f7f190e/ HTTP/1.1" 200 16685
+2018-05-05 10:59:01,825 [Thread-33:8892] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15155
+2018-05-05 10:59:12,682 [MainThread:9108] [django:166] [views:post] [INFO]- try to login
+2018-05-05 10:59:13,042 [MainThread:9108] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 10:59:13,412 [MainThread:9108] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/paper/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 92, in create
+    question = Question.objects.get(question_id=question_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+online_testing.models.DoesNotExist: Question matching query does not exist.
+2018-05-05 10:59:20,623 [Thread-39:5016] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/paper/3a29d182-5008-11e8-98c8-c48e8f7f190e/
+2018-05-05 10:59:20,635 [Thread-39:5016] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/paper/3a29d182-5008-11e8-98c8-c48e8f7f190e/ HTTP/1.1" 404 16731
+2018-05-05 10:59:21,842 [Thread-40:4872] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/paper/3a29d182-5008-11e8-98c8-c48e8f7f190e/
+2018-05-05 10:59:21,842 [Thread-40:4872] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/paper/3a29d182-5008-11e8-98c8-c48e8f7f190e/ HTTP/1.1" 404 16731
+2018-05-05 10:59:25,580 [Thread-41:7624] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 10:59:37,630 [Thread-47:8204] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15312
+2018-05-05 10:59:45,836 [Thread-48:1064] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/online_testing/examination/ HTTP/1.1" 201 15744
+2018-05-05 10:59:55,435 [Thread-53:4968] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5db54a74-5010-11e8-9793-c48e8f7f190e HTTP/1.1" 301 0
+2018-05-05 10:59:55,471 [Thread-54:5624] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5db54a74-5010-11e8-9793-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 11:00:07,097 [MainThread:1900] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:00:07,427 [MainThread:1900] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:00:19,519 [Thread-59:1580] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5db54a74-5010-11e8-9793-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 11:00:20,844 [Thread-60:4736] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5db54a74-5010-11e8-9793-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 11:00:35,682 [MainThread:8256] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:00:36,053 [MainThread:8256] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:00:36,197 [MainThread:8256] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2018-05-05 11:00:58,546 [Thread-66:3048] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 11:01:02,538 [Thread-67:5608] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 11:01:03,070 [Thread-68:1324] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 11:01:03,949 [Thread-69:5952] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 11:01:04,221 [Thread-70:1900] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 11:01:04,691 [Thread-71:7552] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 11:01:05,224 [Thread-72:8200] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15664
+2018-05-05 11:02:01,068 [Thread-77:6600] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5db54a74-5010-11e8-9793-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 11:02:02,508 [Thread-78:808] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5db54a74-5010-11e8-9793-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 11:02:03,236 [Thread-79:8408] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5db54a74-5010-11e8-9793-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 11:02:04,033 [Thread-80:4692] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/5db54a74-5010-11e8-9793-c48e8f7f190e/ HTTP/1.1" 200 10633
+2018-05-05 11:03:23,248 [Thread-85:4676] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15312
+2018-05-05 11:04:34,589 [MainThread:5092] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:04:34,939 [MainThread:5092] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:04:35,229 [MainThread:5092] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2018-05-05 11:04:37,211 [Thread-90:3280] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15746
+2018-05-05 11:08:01,940 [Thread-1:144] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15025
+2018-05-05 11:08:02,437 [Thread-2:8032] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15025
+2018-05-05 11:08:07,588 [MainThread:5792] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:08:07,908 [MainThread:5792] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:08:10,484 [Thread-3:5948] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15458
+2018-05-05 11:09:21,227 [MainThread:5104] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:09:21,579 [MainThread:5104] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:10:21,112 [MainThread:4692] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:10:21,458 [MainThread:4692] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:10:47,188 [Thread-7:8864] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time HTTP/1.1" 301 0
+2018-05-05 11:10:47,224 [Thread-8:760] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10452
+2018-05-05 11:10:59,472 [MainThread:5776] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:10:59,851 [MainThread:5776] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:11:15,154 [Thread-12:8572] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:15,907 [Thread-13:6764] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:16,575 [Thread-14:8596] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:17,585 [Thread-15:8080] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:18,424 [Thread-16:196] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:19,604 [Thread-17:3392] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10452
+2018-05-05 11:11:20,737 [Thread-18:1508] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10460
+2018-05-05 11:11:21,820 [Thread-19:4640] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:22,940 [Thread-20:4508] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:24,082 [Thread-21:9056] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:25,120 [Thread-22:4088] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:11:26,336 [Thread-23:6916] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:12:04,853 [MainThread:2296] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:12:05,203 [MainThread:2296] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:12:13,170 [MainThread:1324] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:12:13,590 [MainThread:1324] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:12:34,828 [MainThread:8052] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:12:35,253 [MainThread:8052] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:12:52,160 [MainThread:8200] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:12:52,510 [MainThread:8200] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:12:59,817 [MainThread:7328] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:13:00,161 [MainThread:7328] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:13:10,457 [Thread-26:4872] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:13:11,260 [Thread-27:4108] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:13:11,948 [Thread-28:3284] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:13:12,476 [Thread-29:2520] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:13:36,754 [MainThread:6060] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:13:37,134 [MainThread:6060] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:14:04,136 [MainThread:6392] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:14:04,476 [MainThread:6392] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:14:24,186 [MainThread:5192] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:14:24,538 [MainThread:5192] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:14:34,721 [Thread-31:8464] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:14:35,515 [Thread-32:4628] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:14:36,744 [Thread-33:4580] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:14:37,084 [Thread-34:3824] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10453
+2018-05-05 11:14:48,452 [MainThread:8012] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:14:48,802 [MainThread:8012] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:16:23,572 [MainThread:8812] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:16:23,908 [MainThread:8812] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:16:54,196 [MainThread:4716] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:16:54,616 [MainThread:4716] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:17:42,809 [MainThread:2644] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:17:43,161 [MainThread:2644] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:18:23,128 [MainThread:7200] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:18:23,472 [MainThread:7200] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:21:37,876 [MainThread:7284] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:21:38,212 [MainThread:7284] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:21:47,713 [Thread-1:8912] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10631
+2018-05-05 11:22:51,227 [MainThread:8072] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:22:51,556 [MainThread:8072] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:22:51,696 [MainThread:8072] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2018-05-05 11:23:30,808 [MainThread:7752] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:23:31,120 [MainThread:7752] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:24:26,003 [MainThread:8900] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:24:26,366 [MainThread:8900] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:26:55,718 [MainThread:2888] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:26:56,089 [MainThread:2888] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:27:22,587 [MainThread:4692] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:27:22,957 [MainThread:4692] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:28:13,268 [MainThread:556] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:28:13,678 [MainThread:556] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:28:25,424 [Thread-2:2024] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10631
+2018-05-05 11:32:41,433 [Thread-1:8032] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10639
+2018-05-05 11:32:42,352 [Thread-2:7336] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10639
+2018-05-05 11:32:43,048 [Thread-3:924] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10639
+2018-05-05 11:33:17,255 [Thread-1:1040] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10639
+2018-05-05 11:33:18,337 [Thread-2:8920] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10639
+2018-05-05 11:33:19,265 [Thread-3:4644] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10639
+2018-05-05 11:33:55,169 [MainThread:7336] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:33:55,533 [MainThread:7336] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:34:05,173 [Thread-4:4444] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10640
+2018-05-05 11:34:40,800 [Thread-5:2400] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15662
+2018-05-05 11:34:49,789 [Thread-6:9068] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/4a5a36b8-5010-11e8-bcba-c48e8f7f190e HTTP/1.1" 301 0
+2018-05-05 11:34:49,985 [Thread-7:8072] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/4a5a36b8-5010-11e8-bcba-c48e8f7f190e/ HTTP/1.1" 200 18784
+2018-05-05 11:35:11,712 [MainThread:692] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:35:12,087 [MainThread:692] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:35:14,005 [Thread-12:3264] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/4a5a36b8-5010-11e8-bcba-c48e8f7f190e/ HTTP/1.1" 200 18784
+2018-05-05 11:35:16,806 [Thread-13:8548] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10641
+2018-05-05 11:35:17,832 [Thread-14:8016] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10641
+2018-05-05 11:35:35,129 [MainThread:1316] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:35:35,479 [MainThread:1316] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:38:47,595 [MainThread:3392] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:38:47,952 [MainThread:3392] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:39:53,551 [MainThread:7160] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:39:53,945 [MainThread:7160] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:39:59,623 [Thread-18:1316] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10744
+2018-05-05 11:41:01,236 [MainThread:3276] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:41:01,556 [MainThread:3276] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:41:22,630 [MainThread:2184] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:41:22,976 [MainThread:2184] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:41:57,593 [MainThread:9048] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:41:57,943 [MainThread:9048] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:42:14,214 [MainThread:908] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:42:14,544 [MainThread:908] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:42:41,675 [MainThread:2972] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:42:42,059 [MainThread:2972] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:42:54,122 [MainThread:4832] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:42:54,472 [MainThread:4832] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:43:45,925 [MainThread:5648] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:43:46,324 [MainThread:5648] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:44:15,713 [MainThread:5648] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:44:16,061 [MainThread:5648] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:45:19,106 [MainThread:8804] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:45:19,456 [MainThread:8804] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:45:45,955 [MainThread:2772] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:45:46,308 [MainThread:2772] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:46:03,725 [MainThread:8616] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:46:04,170 [MainThread:8616] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:47:23,109 [MainThread:4596] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:47:23,461 [MainThread:4596] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:47:29,518 [Thread-19:3196] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10744
+2018-05-05 11:47:30,664 [Thread-20:5636] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10744
+2018-05-05 11:47:31,614 [Thread-21:5372] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10744
+2018-05-05 11:48:29,927 [MainThread:5560] [django:166] [views:post] [INFO]- try to login
+2018-05-05 11:48:30,239 [MainThread:5560] [django:178] [views:post] [INFO]- login successfully
+2018-05-05 11:50:08,469 [Thread-1:8844] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10890
+2018-05-09 15:33:25,186 [Thread-1:4976] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-09 15:33:25,413 [Thread-2:4764] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-05-09 15:33:25,425 [Thread-3:7444] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-05-09 15:33:25,437 [Thread-4:7060] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2018-05-09 15:33:25,441 [Thread-5:7560] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2018-05-09 15:33:25,445 [Thread-7:7940] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2018-05-09 15:33:25,449 [Thread-6:6892] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2018-05-09 15:33:25,457 [Thread-8:3408] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2018-05-09 15:33:25,469 [Thread-9:3768] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-05-09 15:33:25,469 [Thread-10:3884] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+2018-05-09 15:33:25,477 [Thread-11:4744] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2018-05-09 15:33:25,673 [Thread-12:3520] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2018-05-09 15:33:25,835 [Thread-13:3912] [django.request:93] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2018-05-09 15:33:25,836 [Thread-13:3912] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2193
+2018-05-09 15:33:28,800 [Thread-14:3920] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-09 15:34:43,460 [Thread-20:2576] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-09 15:35:36,575 [Thread-26:5540] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-09 15:46:20,848 [Thread-1:9192] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-09 15:47:55,926 [Thread-1:8552] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-09 16:02:54,141 [Thread-1:7724] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-09 16:02:59,355 [Thread-2:212] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 16848
+2018-05-09 16:06:33,202 [Thread-8:5552] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/3 HTTP/1.1" 301 0
+2018-05-09 16:06:33,222 [Thread-9:9004] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/3/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 50, in retrieve
+    return super(QuestionViewSet, self).retrieve(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\generics.py", line 101, in get_object
+    self.check_object_permissions(self.request, obj)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 333, in check_object_permissions
+    if not permission.has_object_permission(request, self, obj):
+  File "D:\tss\SE-TSS\backend\online_testing\permissions.py", line 7, in has_object_permission
+    for i in request:
+TypeError: 'Request' object is not iterable
+2018-05-09 16:06:33,302 [Thread-9:9004] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/3/ HTTP/1.1" 500 114298
+2018-05-09 16:24:34,476 [Thread-1:8636] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/3/ HTTP/1.1" 200 10540
+2018-05-09 16:24:52,648 [Thread-5:8412] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/condition_list HTTP/1.1" 301 0
+2018-05-09 16:24:52,688 [Thread-6:8248] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/condition_list/ HTTP/1.1" 200 11695
+2018-05-09 16:25:07,318 [Thread-11:8316] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/condition_list?a=1 HTTP/1.1" 301 0
+2018-05-09 16:25:07,358 [Thread-12:6888] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/condition_list/?a=1 HTTP/1.1" 200 11723
+2018-05-09 16:25:15,603 [Thread-17:2956] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/condition_list/?a=1,2 HTTP/1.1" 200 11737
+2018-05-09 16:25:27,952 [Thread-23:8616] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/condition_list/?a=1&a=2 HTTP/1.1" 200 11763
+2018-05-09 16:28:17,190 [Thread-2:8460] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/question/condition_list/
+2018-05-09 16:28:17,190 [Thread-2:8460] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/condition_list/?a=1&a=2 HTTP/1.1" 404 10209
+2018-05-09 16:28:23,353 [Thread-1:3408] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?a=1&a=2 HTTP/1.1" 200 11588
+2018-05-09 16:28:43,924 [Thread-1:5696] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?a=1&a=2 HTTP/1.1" 200 11588
+2018-05-09 16:35:12,941 [Thread-7:4828] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?tag_list=1&tag_list=2 HTTP/1.1" 200 10001
+2018-05-09 16:35:42,344 [Thread-1:8716] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?tag_list=1&tag_list=2 HTTP/1.1" 200 10001
+2018-05-09 16:35:55,388 [Thread-7:6820] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11520
+2018-05-09 16:36:09,975 [Thread-13:2532] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?tag_list=Local%20search HTTP/1.1" 200 10663
+2018-05-09 16:37:34,024 [Thread-19:4964] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?tag_list=Local%20search&teacher_list=Yue HTTP/1.1" 200 10768
+2018-05-09 16:39:32,339 [Thread-25:196] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question HTTP/1.1" 301 0
+2018-05-09 16:39:32,379 [Thread-26:2272] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11520
+2018-05-09 16:41:08,817 [Thread-31:8376] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?limit=1 HTTP/1.1" 200 11568
+2018-05-09 16:43:33,031 [Thread-1:8536] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 44, in list
+    data = dict(serializer.data)
+ValueError: dictionary update sequence element #0 has length 10; 2 is required
+2018-05-09 16:43:33,135 [Thread-1:8536] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/?limit=1 HTTP/1.1" 500 98729
+2018-05-09 16:44:40,521 [Thread-1:8036] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 44, in list
+    data = dict(serializer.data)
+ValueError: dictionary update sequence element #0 has length 10; 2 is required
+2018-05-09 16:44:40,637 [Thread-1:8036] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/?limit=1 HTTP/1.1" 500 98735
+2018-05-09 16:44:41,485 [Thread-2:8208] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 44, in list
+    data = dict(serializer.data)
+ValueError: dictionary update sequence element #0 has length 10; 2 is required
+2018-05-09 16:44:41,653 [Thread-2:8208] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/?limit=1 HTTP/1.1" 500 98736
+2018-05-09 16:45:01,882 [Thread-5:8456] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 44, in list
+    data = dict(serializer.data)
+ValueError: dictionary update sequence element #0 has length 10; 2 is required
+2018-05-09 16:45:01,958 [Thread-5:8456] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/ HTTP/1.1" 500 98253
+2018-05-09 16:45:54,003 [Thread-1:2196] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/question/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 45, in list
+    if request.user.type == 1:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\functional.py", line 216, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'Account' object has no attribute 'type'
+2018-05-09 16:45:54,111 [Thread-1:2196] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/question/ HTTP/1.1" 500 103592
+2018-05-09 16:47:01,942 [Thread-1:8400] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-09 16:48:01,929 [Thread-2:8088] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/1 HTTP/1.1" 301 0
+2018-05-09 16:48:01,971 [Thread-3:8668] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/question/1/
+2018-05-09 16:48:01,971 [Thread-3:8668] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/1/ HTTP/1.1" 404 10063
+2018-05-09 16:48:05,032 [Thread-8:6644] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/3/ HTTP/1.1" 200 10540
+2018-05-09 16:48:05,068 [Thread-9:7404] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-05-09 16:48:13,780 [Thread-1:8536] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/3/ HTTP/1.1" 200 10540
+2018-05-09 16:48:14,835 [Thread-7:5256] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/3/ HTTP/1.1" 200 10540
+2018-05-09 16:48:15,504 [Thread-8:8520] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/3/ HTTP/1.1" 200 10540
+2018-05-09 16:48:39,631 [Thread-1:1932] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/3/ HTTP/1.1" 200 10492
+2018-05-09 16:48:43,984 [Thread-2:212] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-09 16:50:17,495 [Thread-8:2020] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-09 16:51:11,067 [Thread-14:7060] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 15662
+2018-05-09 16:51:22,909 [Thread-21:3672] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/4a5a36b8-5010-11e8-bcba-c48e8f7f190e HTTP/1.1" 301 0
+2018-05-09 16:51:22,999 [Thread-22:1492] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/4a5a36b8-5010-11e8-bcba-c48e8f7f190e/ HTTP/1.1" 200 18784
+2018-05-09 16:52:40,843 [Thread-1:7688] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/4a5a36b8-5010-11e8-bcba-c48e8f7f190e/ HTTP/1.1" 200 12137
+2018-05-09 16:53:41,876 [Thread-7:8224] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 10437
+2018-05-09 16:56:56,864 [Thread-13:5052] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-09 16:57:15,916 [Thread-20:2180] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question?course_id=21120261 HTTP/1.1" 301 0
+2018-05-09 16:57:15,968 [Thread-21:7488] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?course_id=21120261 HTTP/1.1" 200 11479
+2018-05-09 16:59:09,710 [Thread-1:1348] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?course_id=21120261 HTTP/1.1" 200 11479
+2018-05-09 16:59:11,990 [Thread-2:8708] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 10437
+2018-05-09 16:59:39,548 [Thread-9:8224] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/4a5a36b8-5010-11e8-bcba-c48e8f7f190e/ HTTP/1.1" 200 12137
+2018-05-09 17:01:14,097 [Thread-1:5052] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/4a5a36b8-5010-11e8-bcba-c48e8f7f190e/ HTTP/1.1" 200 12137
+2018-05-09 17:01:21,562 [Thread-7:536] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 10437
+2018-05-09 17:01:36,374 [Thread-13:4280] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper?course=21120261 HTTP/1.1" 301 0
+2018-05-09 17:01:36,467 [Thread-14:9096] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/?course=21120261 HTTP/1.1" 200 10525
+2018-05-09 17:01:41,659 [Thread-15:3892] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/?course=21120262 HTTP/1.1" 200 9909
+2018-05-09 17:01:45,661 [Thread-21:9212] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/?course=21120261 HTTP/1.1" 200 10525
+2018-05-09 17:02:29,057 [Thread-27:8648] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/?course=21120261 HTTP/1.1" 200 10525
+2018-05-09 17:02:40,779 [Thread-1:8280] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/qu/
+2018-05-09 17:02:40,783 [Thread-1:8280] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/qu/?course=21120261 HTTP/1.1" 404 16012
+2018-05-09 17:02:46,528 [Thread-7:2948] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/?course=21120261 HTTP/1.1" 200 11464
+2018-05-09 17:02:52,077 [Thread-8:7292] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/?course=21120261 HTTP/1.1" 200 10525
+2018-05-09 17:04:53,410 [Thread-13:9176] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/?course=21120261 HTTP/1.1" 200 10525
+2018-05-09 17:04:57,661 [Thread-18:8280] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination HTTP/1.1" 301 0
+2018-05-09 17:04:57,885 [Thread-19:1592] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15520
+2018-05-09 17:05:12,869 [Thread-26:2808] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15520
+2018-05-09 17:05:13,750 [Thread-27:2152] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15520
+2018-05-09 17:05:14,754 [Thread-28:9136] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15520
+2018-05-09 17:05:27,532 [Thread-34:556] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time HTTP/1.1" 301 0
+2018-05-09 17:05:27,771 [Thread-35:2164] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/left_time/ HTTP/1.1" 200 10443
+2018-05-09 17:07:11,027 [Thread-40:6820] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10889
+2018-05-09 17:13:41,672 [Thread-46:10064] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/8927a25c-5011-11e8-814c-c48e8f7f190e/ HTTP/1.1" 200 10889
+2018-05-09 17:13:44,257 [Thread-48:10024] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15519
+2018-05-09 17:13:56,146 [Thread-1:9264] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15519
+2018-05-09 17:13:56,170 [Thread-2:8316] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-05-09 18:07:03,635 [Thread-1:10192] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-09 18:07:07,943 [Thread-7:8952] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15519
+2018-05-09 18:07:52,473 [Thread-14:9524] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/online_testing/examination/ HTTP/1.1" 400 14869
+2018-05-09 18:09:32,486 [MainThread:9960] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:09:32,856 [MainThread:9960] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:09:39,383 [Thread-15:9504] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 14777
+2018-05-09 18:09:45,833 [Thread-16:8400] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/
+Traceback (most recent call last):
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 158, in create
+    , student=request.data['student'])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+online_testing.models.DoesNotExist: Examination matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 162, in create
+    return super(ExaminationViewSet, self).create(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\fields.py", line 1855, in to_representation
+    return method(value)
+  File "D:\tss\SE-TSS\backend\online_testing\serializers.py", line 54, in get_answers
+    return json.loads(obj.answers.replace('\'', '\"'))
+AttributeError: 'NoneType' object has no attribute 'replace'
+2018-05-09 18:09:45,947 [Thread-16:8400] [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/online_testing/examination/ HTTP/1.1" 500 141261
+2018-05-09 18:11:09,364 [Thread-1:2772] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:11:27,396 [Thread-7:9372] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/left_time HTTP/1.1" 301 0
+2018-05-09 18:11:27,428 [Thread-8:9384] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/examination/left_time/
+2018-05-09 18:11:27,429 [Thread-8:9384] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/left_time/ HTTP/1.1" 404 10136
+2018-05-09 18:11:34,738 [Thread-13:9708] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/info HTTP/1.1" 301 0
+2018-05-09 18:11:34,772 [Thread-14:6888] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/info/ HTTP/1.1" 400 10091
+2018-05-09 18:11:49,985 [Thread-19:9860] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/info?username=Ben&paper_id HTTP/1.1" 301 0
+2018-05-09 18:11:50,001 [Thread-20:9412] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/info/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 2363, in to_python
+    return uuid.UUID(value)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\uuid.py", line 140, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 188, in info
+    paper = Paper.objects.get(paper_id=paper_id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 397, in get
+    num = len(clone)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 254, in __len__
+    self._fetch_all()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 1053, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 459, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 391, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\where.py", line 80, in as_sql
+    sql, params = compiler.compile(child)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 391, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 161, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 260, in process_rhs
+    return super().process_rhs(compiler, connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 93, in process_rhs
+    return self.get_db_prep_lookup(value, connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 187, in get_db_prep_lookup
+    [get_db_prep_value(value, connection, prepared=True)]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 2354, in get_db_prep_value
+    value = self.to_python(value)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 2368, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ["'' is not a valid UUID."]
+2018-05-09 18:11:50,283 [Thread-20:9412] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/info/?username=Ben&paper_id HTTP/1.1" 500 178153
+2018-05-09 18:11:55,177 [Thread-21:9588] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/examination/info/?username=Ben HTTP/1.1" 400 10164
+2018-05-09 18:12:04,375 [Thread-25:9232] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:12:45,132 [Thread-32:384] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/info/?username=Ben&paper_id=4a5a36b8-5010-11e8-bcba-c48e8f7f190e HTTP/1.1" 200 10700
+2018-05-09 18:12:53,523 [Thread-38:9444] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:25:06,931 [Thread-44:5024] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:25:06,958 [Thread-45:2064] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-05-09 18:25:07,698 [Thread-46:4420] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:25:52,560 [Thread-52:1608] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:26:50,460 [MainThread:2576] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:26:50,750 [MainThread:2576] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:26:50,969 [MainThread:2576] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/examination/19634a40-5371-11e8-9787-c48e8f7f190e/conservation/
+2018-05-09 18:26:52,642 [Thread-58:9744] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 14777
+2018-05-09 18:27:10,303 [Thread-64:9760] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/online_testing/examination/ HTTP/1.1" 201 15182
+2018-05-09 18:27:21,682 [MainThread:9480] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:27:22,009 [MainThread:9480] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:27:29,035 [Thread-65:5692] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:28:07,280 [MainThread:9556] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:28:07,659 [MainThread:9556] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:28:18,958 [Thread-71:1124] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:28:19,692 [Thread-72:2224] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:28:20,235 [Thread-73:5656] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:28:20,851 [Thread-74:9596] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:28:21,434 [Thread-75:1864] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:28:43,225 [MainThread:9428] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:28:43,540 [MainThread:9428] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:29:33,612 [Thread-81:9744] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:29:55,696 [Thread-1:560] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:30:12,946 [Thread-1:1612] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\fields.py", line 1855, in to_representation
+    return method(value)
+  File "D:\tss\SE-TSS\backend\online_testing\serializers.py", line 55, in get_answers
+    return json.loads(obj.answers.replace('\'', '\"'))
+AttributeError: 'NoneType' object has no attribute 'replace'
+2018-05-09 18:30:13,061 [Thread-1:1612] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/ HTTP/1.1" 500 132306
+2018-05-09 18:30:45,964 [MainThread:9932] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:30:46,231 [MainThread:9932] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:31:14,891 [MainThread:560] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:31:15,201 [MainThread:560] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:31:18,326 [Thread-7:9460] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\fields.py", line 1855, in to_representation
+    return method(value)
+  File "D:\tss\SE-TSS\backend\online_testing\serializers.py", line 55, in get_answers
+    return json.loads(obj.answers.replace('\'', '\"'))
+AttributeError: 'NoneType' object has no attribute 'replace'
+2018-05-09 18:31:18,488 [Thread-7:9460] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/ HTTP/1.1" 500 132303
+2018-05-09 18:31:19,256 [Thread-8:1348] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\fields.py", line 1855, in to_representation
+    return method(value)
+  File "D:\tss\SE-TSS\backend\online_testing\serializers.py", line 55, in get_answers
+    return json.loads(obj.answers.replace('\'', '\"'))
+AttributeError: 'NoneType' object has no attribute 'replace'
+2018-05-09 18:31:19,336 [Thread-8:1348] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/examination/ HTTP/1.1" 500 132304
+2018-05-09 18:31:34,741 [Thread-1:9316] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:31:47,039 [MainThread:3712] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:31:47,370 [MainThread:3712] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:32:19,398 [MainThread:2440] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:32:19,729 [MainThread:2440] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:32:27,530 [Thread-4:9992] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:32:29,146 [Thread-5:7488] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:32:29,636 [Thread-6:1776] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:33:28,041 [MainThread:10008] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:33:28,353 [MainThread:10008] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:33:37,823 [Thread-12:9188] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:33:38,571 [Thread-11:9248] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:33:39,011 [Thread-13:5648] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:36:22,850 [MainThread:7236] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:36:23,176 [MainThread:7236] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:36:38,249 [Thread-1:9524] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:37:32,943 [MainThread:2948] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:37:33,273 [MainThread:2948] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:37:34,761 [Thread-6:880] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:37:35,582 [Thread-7:7236] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:37:36,414 [Thread-8:9760] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:37:37,037 [Thread-9:10160] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:37:37,657 [Thread-10:7172] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:37:50,447 [MainThread:9252] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:37:50,757 [MainThread:9252] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:38:15,839 [Thread-15:2996] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15210
+2018-05-09 18:39:52,560 [MainThread:952] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:39:52,890 [MainThread:952] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:39:54,411 [Thread-20:7612] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15356
+2018-05-09 18:40:23,199 [MainThread:9860] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:40:23,519 [MainThread:9860] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:40:23,636 [MainThread:9860] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/87eb0a1c-5373-11e8-9d86-c48e8f7f190e/conservation/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 215, in conservation
+    print(serializer.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 258, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+2018-05-09 18:40:57,356 [MainThread:880] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:40:57,696 [MainThread:880] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:40:57,806 [MainThread:880] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/87eb0a1c-5373-11e8-9d86-c48e8f7f190e/conservation/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 217, in conservation
+    serializer.save()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\serializers.py", line 198, in save
+    "You cannot call `.save()` after accessing `serializer.data`."
+AssertionError: You cannot call `.save()` after accessing `serializer.data`.If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. 
+2018-05-09 18:41:09,751 [MainThread:7952] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:41:10,088 [MainThread:7952] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:41:33,861 [MainThread:7236] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:41:34,287 [MainThread:7236] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:41:52,680 [MainThread:1600] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:41:52,990 [MainThread:1600] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:42:19,063 [MainThread:9252] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:42:19,383 [MainThread:9252] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:43:38,635 [MainThread:2772] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:43:39,085 [MainThread:2772] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:44:12,804 [MainThread:9668] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:44:13,222 [MainThread:9668] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:44:50,862 [MainThread:10064] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:44:51,192 [MainThread:10064] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:44:59,609 [MainThread:10232] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:44:59,919 [MainThread:10232] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:45:42,123 [MainThread:8288] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:45:42,464 [MainThread:8288] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:45:49,269 [MainThread:8312] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:45:49,602 [MainThread:8312] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:50:21,321 [Thread-25:10188] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15356
+2018-05-09 18:53:41,668 [MainThread:10044] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:53:41,970 [MainThread:10044] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:53:46,342 [Thread-30:8648] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15356
+2018-05-09 18:55:44,520 [MainThread:5744] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:55:44,800 [MainThread:5744] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:55:48,176 [Thread-35:2520] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15356
+2018-05-09 18:56:33,365 [MainThread:2772] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:56:33,681 [MainThread:2772] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:56:33,931 [MainThread:2772] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/87eb0a1c-5373-11e8-9d86-c48e8f7f190e/submission/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 233, in submission
+    for question_id, score in zip(exam.paper.question_id_list, exam.paper.score_list):
+TypeError: zip argument #1 must support iteration
+2018-05-09 18:58:18,947 [MainThread:5104] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:58:19,255 [MainThread:5104] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:58:19,516 [MainThread:5104] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/87eb0a1c-5373-11e8-9d86-c48e8f7f190e/submission/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 234, in submission
+    for question_id, score in zip(exam_serializer.data.question_id_list, exam_serializer.data.score_list):
+AttributeError: 'ReturnDict' object has no attribute 'question_id_list'
+2018-05-09 18:58:47,222 [MainThread:9840] [django:166] [views:post] [INFO]- try to login
+2018-05-09 18:58:47,532 [MainThread:9840] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 18:58:56,548 [Thread-40:8344] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15354
+2018-05-09 18:58:57,453 [Thread-42:9912] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15354
+2018-05-09 18:58:57,839 [Thread-41:10056] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15354
+2018-05-09 19:00:58,251 [MainThread:9456] [django:166] [views:post] [INFO]- try to login
+2018-05-09 19:00:58,570 [MainThread:9456] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 19:00:58,920 [MainThread:9456] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/examination/87eb0a1c-5373-11e8-9d86-c48e8f7f190e/submission/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 241, in submission
+    print(question_serializer['answer_list'])
+TypeError: 'Question' object is not subscriptable
+2018-05-09 19:01:20,848 [MainThread:8536] [django:166] [views:post] [INFO]- try to login
+2018-05-09 19:01:21,141 [MainThread:8536] [django:178] [views:post] [INFO]- login successfully
+2018-05-09 19:01:26,243 [Thread-47:5180] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15355
+2018-05-09 19:01:47,283 [Thread-52:8344] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15355
+2018-05-09 19:01:48,096 [Thread-53:9276] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15355
+2018-05-09 19:02:09,701 [Thread-58:9908] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15355
+2018-05-09 19:02:10,347 [Thread-63:8672] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15355
+2018-05-09 19:02:11,096 [Thread-64:9952] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15355
+2018-05-09 19:02:11,636 [Thread-65:9500] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/examination/ HTTP/1.1" 200 15355
+2018-05-09 19:08:17,210 [Thread-1:9664] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/analysis
+2018-05-09 19:08:17,211 [Thread-1:9664] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/analysis HTTP/1.1" 404 18183
+2018-05-09 19:08:22,852 [Thread-2:2440] [django.request:93] [base:get_response] [WARNING]- Not Found: /api/online_testing/analysis/
+2018-05-09 19:08:22,854 [Thread-2:2440] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/analysis/ HTTP/1.1" 404 18186
+2018-05-09 19:09:12,950 [Thread-1:9656] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student HTTP/1.1" 301 0
+2018-05-09 19:09:13,031 [Thread-2:9360] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/ HTTP/1.1" 200 9865
+2018-05-09 19:10:05,545 [Thread-1:1976] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 265, in student
+    course = Course.objects.get(course_id=request.query_params.get('course'))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+authentication.models.DoesNotExist: Course matching query does not exist.
+2018-05-09 19:10:05,652 [Thread-1:1976] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/student/ HTTP/1.1" 500 105336
+2018-05-09 19:10:15,893 [Thread-5:1300] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-09 19:10:27,855 [Thread-12:9904] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/paper/ HTTP/1.1" 200 10437
+2018-05-09 19:10:29,930 [Thread-13:9632] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 265, in student
+    course = Course.objects.get(course_id=request.query_params.get('course'))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+authentication.models.DoesNotExist: Course matching query does not exist.
+2018-05-09 19:10:30,014 [Thread-13:9632] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/student/ HTTP/1.1" 500 105201
+2018-05-09 19:10:34,261 [Thread-14:7304] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 158, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = response.render()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\renderers.py", line 681, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\renderers.py", line 422, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\renderers.py", line 105, in render
+    allow_nan=not self.strict, separators=separators
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\utils\json.py", line 28, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\encoder.py", line 200, in encode
+    chunks = list(chunks)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\encoder.py", line 429, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\encoder.py", line 403, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\encoder.py", line 436, in _iterencode
+    o = _default(o)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\utils\encoders.py", line 68, in default
+    return super(JSONEncoder, self).default(obj)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\json\encoder.py", line 179, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <Course: Course object (21120261)> is not JSON serializable
+2018-05-09 19:10:34,412 [Thread-14:7304] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/student/?course=21120261 HTTP/1.1" 500 147367
+2018-05-09 19:11:11,897 [Thread-1:9492] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/?course=21120261 HTTP/1.1" 200 9973
+2018-05-09 19:11:25,236 [Thread-5:9656] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261 HTTP/1.1" 200 10073
+2018-05-09 19:11:30,041 [Thread-10:9148] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 266, in student
+    course = Course.objects.get(course_id=request.query_params.get('course'))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+authentication.models.DoesNotExist: Course matching query does not exist.
+2018-05-09 19:11:30,111 [Thread-10:9148] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120262 HTTP/1.1" 500 105833
+2018-05-09 19:12:22,291 [Thread-1:1300] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 266, in student
+    course = Course.objects.get(course_id=request.query_params.getlist('course'))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+authentication.models.DoesNotExist: Course matching query does not exist.
+2018-05-09 19:12:22,371 [Thread-1:1300] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120262 HTTP/1.1" 500 106028
+2018-05-09 19:12:46,952 [Thread-5:1408] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 266, in student
+    course = Course.objects.get(course_id=request.query_params.getlist('course'))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+authentication.models.DoesNotExist: Course matching query does not exist.
+2018-05-09 19:12:47,018 [Thread-5:1408] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261 HTTP/1.1" 500 105893
+2018-05-09 19:13:28,687 [Thread-8:9868] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 266, in student
+    return Response({'course': course.name})
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+authentication.models.DoesNotExist: Course matching query does not exist.
+2018-05-09 19:13:28,757 [Thread-8:9868] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261 HTTP/1.1" 500 105921
+2018-05-09 19:13:35,828 [Thread-1:9480] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261 HTTP/1.1" 200 10073
+2018-05-09 19:20:32,944 [Thread-1:10056] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261 HTTP/1.1" 200 10065
+2018-05-09 19:21:38,601 [Thread-1:3484] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261 HTTP/1.1" 200 10152
+2018-05-09 19:31:34,978 [Thread-1:4140] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261 HTTP/1.1" 200 10152
+2018-05-09 19:31:54,136 [Thread-6:9472] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261&student_id_list=Ben HTTP/1.1" 200 10575
+2018-05-09 19:39:06,169 [Thread-1:5728] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/paper/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 2363, in to_python
+    return uuid.UUID(value)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\uuid.py", line 140, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 306, in paper
+    for paper in papers:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 272, in __iter__
+    self._fetch_all()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 1053, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 459, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 391, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\where.py", line 80, in as_sql
+    sql, params = compiler.compile(child)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\compiler.py", line 391, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 161, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 260, in process_rhs
+    return super().process_rhs(compiler, connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 93, in process_rhs
+    return self.get_db_prep_lookup(value, connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 187, in get_db_prep_lookup
+    [get_db_prep_value(value, connection, prepared=True)]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 2354, in get_db_prep_value
+    value = self.to_python(value)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 2368, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['\'4a5a36b8-5010-11e8-bcba-c48e8f7f190e"\' is not a valid UUID.']
+2018-05-09 19:39:06,281 [Thread-1:5728] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/paper/?course=21120261&course=21120261&paper_id_list=4a5a36b8-5010-11e8-bcba-c48e8f7f190e%22 HTTP/1.1" 500 172318
+2018-05-09 19:39:12,756 [Thread-4:2084] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/online_testing/analysis/paper/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\tss\SE-TSS\backend\online_testing\views.py", line 314, in paper
+    data['students_scores_list'].append({
+KeyError: 'students_scores_list'
+2018-05-09 19:39:12,853 [Thread-4:2084] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/paper/?course=21120261&course=21120261&paper_id_list=4a5a36b8-5010-11e8-bcba-c48e8f7f190e HTTP/1.1" 500 99937

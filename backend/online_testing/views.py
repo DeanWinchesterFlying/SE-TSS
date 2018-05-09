@@ -1,24 +1,31 @@
+import json
 from datetime import datetime
 
-import pytz
-from django.utils import timezone
+from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Q
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 import numpy as np
 from rest_framework.viewsets import GenericViewSet, mixins
 
+from authentication.models import Student, Course
 from online_testing.models import Question, Paper, Examination
 from online_testing.serializers import QuestionSerializer, PaperSerializer, ExaminationSerializer
 from online_testing.filters import QuestionFilter
+from online_testing.permissions import ExamInfoAccessPermission, ModifyPermission
 
 
 class QuestionViewSet(viewsets.ModelViewSet):
+    # not safe: update(object), partial_update(object), delete(object), insert,
+    # safe: list, retrieve(object)
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
     filter_backends = (DjangoFilterBackend, QuestionFilter)
-    filter_fields = ('question_id',)
+    filter_fields = ('course',)
+    permission_classes = (IsAuthenticated, ModifyPermission)
 
     @action(methods=['post'], detail=False)
     def batches_deletion(self, request):
@@ -27,31 +34,43 @@ class QuestionViewSet(viewsets.ModelViewSet):
             self.queryset.get(question_id=question_id).delete()
         return Response({'question_list': question_id_list})
 
-    @action(methods=['post'], detail=False)
-    def condition_list(self, request, *args, **kwargs):
-        return self.list(request, *args, **kwargs)
-
     def create(self, request, *args, **kwargs):
         return super(QuestionViewSet, self).create(request, *args, **kwargs)
 
     def list(self, request, *args, **kwargs):
-        print(request.user)
-        print(request.session)
-        #for i in request.session:
-        #    print(i)
-        #print(request.auth)
         queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
             return self.get_paginated_response(serializer.data)
         serializer = self.get_serializer(queryset, many=True)
-        return Response({'question_list': serializer.data})
+        data = serializer.data
+        if request.user.user_type == 1:
+            for question in data:
+                question.pop('answer_list', None)
+        return Response({'question_list': data})
+
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        data = serializer.data
+        if request.user.user_type == 1:
+            data.pop('answer_list', None)
+        return Response(data)
 
 
-class PaperViewSet(viewsets.ModelViewSet):
+class PaperViewSet(mixins.CreateModelMixin,
+                   mixins.RetrieveModelMixin,
+                   mixins.DestroyModelMixin,
+                   mixins.ListModelMixin,
+                   GenericViewSet):
     queryset = Paper.objects.all()
     serializer_class = PaperSerializer
+    permission_classes = (IsAuthenticated, ModifyPermission)
+    filter_backends = (DjangoFilterBackend, )
+    filter_fields = ('course',)
+    # not safe: delete(object), insert,
+    # safe: list, retrieve(object)
 
     def create(self, request, *args, **kwargs):
 
@@ -71,10 +90,6 @@ class PaperViewSet(viewsets.ModelViewSet):
             question_set = QuestionFilter().filter_queryset(request, Question.objects.all(), None)
             choice_list = question_set.filter(type='Choice')
             judge_list = question_set.difference(choice_list)
-            for choice in choice_list:
-                print(choice.description)
-            for judge in judge_list:
-                print(judge.description)
             content = {'message': 'The questions are less than expected'}
             if choice_list.count() < num_choice or judge_list.count() < num_judge:
                 return Response(content, status=status.HTTP_417_EXPECTATION_FAILED)
@@ -104,11 +119,14 @@ class PaperViewSet(viewsets.ModelViewSet):
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()
         serializer = self.get_serializer(instance)
-        data = dict(serializer.data)
+        data = serializer.data
         data['question_list'] = []
         for question_id in data['question_id_list']:
             question = Question.objects.all().get(question_id=question_id)
-            data['question_list'].append(QuestionSerializer(question).data)
+            question_data = QuestionSerializer(question).data
+            if request.user.user_type == 1:
+                question_data.pop('answer_list', None)
+            data['question_list'].append(question_data)
         data.pop('question_id_list')
         return Response(data)
 
@@ -124,72 +142,198 @@ class PaperViewSet(viewsets.ModelViewSet):
 
 class ExaminationViewSet(mixins.CreateModelMixin,
                    mixins.RetrieveModelMixin,
-                   #mixins.UpdateModelMixin,
                    mixins.ListModelMixin,
                    GenericViewSet):
     queryset = Examination.objects.all()
     serializer_class = ExaminationSerializer
+    permission_classes = (IsAuthenticated, ExamInfoAccessPermission, )
+    # not safe: delete(object), insert,
+    # safe: list, retrieve(object)
+
+    #1. 提前交卷
+    #2. 超时自动交卷
 
     def create(self, request, *args, **kwargs):
-        return super(ExaminationViewSet, self).create(request, *args, **kwargs)
+        try:
+            Examination.objects.get(paper=request.data['paper']
+                                                   , student=request.data['student'])
+            return Response({'message': 'already done.', 'is_ok': False},
+                            status=status.HTTP_400_BAD_REQUEST)
+        except ObjectDoesNotExist:
+            return super(ExaminationViewSet, self).create(request, *args, **kwargs)
+
+    def retrieve(self, request, *args, **kwargs):
+        return super(ExaminationViewSet, self).retrieve(request, *args, **kwargs)
+
+    @staticmethod
+    def get_left_time(exam):
+        left_time = exam.paper.duration * 60 - \
+                    (datetime.now() - exam.start_time.replace(tzinfo=None)).total_seconds()
+        if left_time < 0:
+            left_time = 0
+        if left_time == 0 and not exam.submit:
+            exam.submit = True
+            exam.save()
+        return left_time
 
     @action(methods=['get'], detail=True)
     def left_time(self, request, pk=None):
         exam = self.get_object()
-        left_time = 0
-        if exam.submit:
-            return Response({'left_time': left_time})
-        left_time = exam.paper.duration * 60 - \
-                    (datetime.now() - exam.start_time.replace(tzinfo=None)).total_seconds()
-        return Response({'left_time': left_time})
+        return Response({'left_time': self.get_left_time(exam)})
 
-    #@action(methods=['post'], detail=True)
-    @action(methods=['get'], detail=True)
-    def conservation(self, request, pk=None):
-        exam = self.get_object()
-        if not exam.begin and not exam.submit:
-            exam.begin = True
-            exam.start_time = datetime.now()
-            exam.save()
-            return Response({'message': 'start successfully', 'is_ok': True}, status=status.HTTP_200_OK)
-        if exam.begin:
-            return Response({'message': 'already began', 'is_ok': False},
-                            status=status.HTTP_400_BAD_REQUEST)
-        return Response({'message': 'already submitted', 'is_ok': False},
+    @action(methods=['get'], detail=False)
+    def info(self, request, pk=None):
+        username = request.query_params.get('username')
+        paper_id = request.query_params.get('paper_id')
+        try:
+            paper = Paper.objects.get(paper_id=paper_id)
+            student = Student.objects.get(username=username)
+            exam_list = Examination.objects.filter(paper=paper, student=student)
+            for exam in exam_list:
+                if self.get_left_time(exam) > 0:
+                    self.check_object_permissions(request, exam)
+                    serializer = self.get_serializer(exam)
+                    return Response(serializer.data)
+        except ObjectDoesNotExist:
+            pass
+        return Response({'message': 'invalid username or paper', 'is_ok': False},
                         status=status.HTTP_400_BAD_REQUEST)
 
-    # @action(methods=['post'], detail=True)
-    @action(methods=['get'], detail=True)
+    @action(methods=['post'], detail=True)
+    def conservation(self, request, pk=None):
+        exam = self.get_object()
+        if self.get_left_time(exam) == 0:
+            return Response({'message': 'already finished', 'is_ok': False},
+                            status=status.HTTP_400_BAD_REQUEST)
+        if exam.submit:
+            return Response({'message': 'already submitted', 'is_ok': False},
+                            status=status.HTTP_400_BAD_REQUEST)
+
+        exam.answers = request.data['answers']
+        data = {'answers': request.data['answers']}
+        #print(data)
+        serializer = self.get_serializer(exam, data=data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        if getattr(exam, '_prefetched_objects_cache', None):
+            exam._prefetched_objects_cache = {}
+
+        return Response({'message': 'save successfully', 'is_ok': True}, status=status.HTTP_200_OK)
+
+    @action(methods=['post'], detail=True)
     def submission(self, request, pk=None):
         exam = self.get_object()
-        if not exam.submit:
-            exam.submit = True
-            exam.save()
-            return Response({'message': 'submit successfully', 'is_ok': True}, status=status.HTTP_200_OK)
-        return Response({'message': 'never starts or already submitted', 'is_ok': False}, status=status.HTTP_400_BAD_REQUEST)
-        # request.user
+        if exam.submit:
+            return Response({'message': 'already submitted', 'is_ok': False},
+                            status=status.HTTP_400_BAD_REQUEST)
+        if exam.answers:
+            answers = json.loads(exam.answers.replace('\'', '\"'))
+            total_score = 0
+            pattern = '%d_answers'
+            exam_serializer = PaperSerializer(exam.paper)
+
+            for question_id, score in zip(exam_serializer.data['question_id_list'],
+                                          exam_serializer.data['score_list']):
+                answer = answers[pattern % question_id]
+                question = Question.objects.get(question_id=question_id)
+                question_serializer = QuestionSerializer(question)
+                if answer == question_serializer.data['answer_list']:
+                    total_score += score
+        else:
+            total_score = -1
+        # data = {'answers': repr(request.data['answers']), 'submit': True}
+        data = {'submit': True, 'score': total_score}
+        exam.submit = data['submit']
+        exam.score = data['score']
+        serializer = self.get_serializer(exam, data=data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        if getattr(exam, '_prefetched_objects_cache', None):
+            exam._prefetched_objects_cache = {}
+
+        return Response({'message': 'submit successfully', 'is_ok': True}, status=status.HTTP_200_OK)
 
 
 class AnalysisViewSet(GenericViewSet):
     queryset = Examination.objects.all()
     serializer_class = ExaminationSerializer
+    permission_classes = (IsAuthenticated,)
 
-    @action(methods=['post'], detail=False)
+    @action(methods=['get'], detail=False)
     def student(self, request):
-        # TODO:
-        pass
+        student_id_list = request.query_params.getlist('student_id_list')
+        data = {
+            'students_scores_list': [],
+            'is_ok': True,
+            'message': 'query by student id',
+        }
+        course = Course.objects.get(course_id=request.query_params.get('course'))
+        papers = Paper.objects.filter(course=course)
+        q = Q()
+        for paper in papers:
+            q = q | Q(paper=paper)
+        exams = Examination.objects.filter(q)
+        for student_id in student_id_list:
+            student_score = []
+            student_exams = exams.filter(student=student_id)
+            for exam in student_exams:
+                student_score.append({
+                    'paper_id': exam.paper.paper_id,
+                    'score': exam.score
+                })
+            data['students_scores_list'].append({
+                'student_id': student_id,
+                'student_score': student_score
+            })
+        return Response(data)
 
-    @action(methods=['post'], detail=False)
+    @action(methods=['get'], detail=False)
     def paper(self, request):
-        # TODO:
-        pass
+        paper_id_list = request.query_params.getlist('paper_id_list')
+        data = {
+            'papers_scores_list': [],
+            'is_ok': True,
+            'message': 'query by student id',
+        }
+        course = Course.objects.get(course_id=request.query_params.get('course'))
+        q = Q()
+        for paper_id in paper_id_list:
+            q = q | Q(paper_id=paper_id)
+        papers = Paper.objects.filter(course=course).filter(q)
 
-    @action(methods=['post'], detail=False)
+        for paper in papers:
+            exams = Examination.objects.filter(paper=paper)
+            paper_score = []
+            for exam in exams:
+                paper_score.append({
+                    'student_id': exam.student.username.username,
+                    'score': exam.score,
+                })
+            data['papers_scores_list'].append({
+                'paper_id': paper.paper_id,
+                'paper_score': paper_score,
+            })
+        return Response(data)
+
+    @action(methods=['get'], detail=False)
     def type(self, request):
-        # TODO:
+        paper_id_list = request.query_params.getlist('paper_id_list')
+        question_type = request.query_params.get('type')
+        data = {
+            'papers_type_scores_list': [],
+            'is_ok': True,
+            'message': 'query by student id',
+        }
+        course = Course.objects.get(course_id=request.query_params.get('course'))
+        q = Q()
+        for paper_id in paper_id_list:
+            q = q | Q(paper_id=paper_id)
+        papers = Paper.objects.filter(course=course).filter(q)
         pass
 
-    @action(methods=['post'], detail=False)
+    @action(methods=['get'], detail=False)
     def tag(self, request):
         # TODO:
         pass

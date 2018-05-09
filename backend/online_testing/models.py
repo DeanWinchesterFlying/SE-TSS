@@ -43,14 +43,14 @@ class Question(models.Model):
         (3, 'Difficult'),
         (4, 'Very Difficult')
     )
-    question_id = models.UUIDField(primary_key=True, default=uuid.uuid1, editable=False)
+    question_id = models.AutoField(primary_key=True)
     description = models.TextField(null=False)
     choice_list = ListField(null=False)
     answer_list = ListField(null=False)
     tag = models.CharField(max_length=32)
     type = models.CharField(choices=QUESTION_TYPE, null=False, max_length=12, default='Choice')
     level = models.IntegerField(choices=QUESTION_LEVEL, null=False, default=0)
-    provider = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    provider = models.ForeignKey(Faculty, on_delete=models.CASCADE, null=True, default=None)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False)
 
 
@@ -60,8 +60,7 @@ class Paper(models.Model):
     start_time = models.DateTimeField(default=timezone.now())
     deadline = models.DateTimeField(default=timezone.now())
     duration = models.IntegerField()
-    question_id_list = ListField(null=False)
-    # question_id_list = models.ManyToManyField(Question)
+    question_id_list = models.ManyToManyField(Question)
     score_list = ListField(null=False)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, null=False)
 
@@ -69,9 +68,9 @@ class Paper(models.Model):
 class Examination(models.Model):
     exam_id = models.UUIDField(primary_key=True, default=uuid.uuid1, editable=False)
     paper = models.ForeignKey(Paper, on_delete=models.CASCADE, null=False)
-    student = models.ForeignKey(Student, on_delete=models.CASCADE, null=False)
-    teacher = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-    answers = models.FileField(upload_to='answers/', null=True)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, null=True, default=None)
+    teacher = models.ForeignKey(Faculty, on_delete=models.CASCADE, null=True, default=None)
+    answers = models.TextField(null=True, default=None)
     score = models.SmallIntegerField(null=False, default=-1)
-    start_time = models.DateTimeField(default=timezone.now())
+    start_time = models.DateTimeField(auto_now_add=True)
     submit = models.BooleanField(default=False)
