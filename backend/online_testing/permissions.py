@@ -4,7 +4,7 @@ from rest_framework import permissions
 class ModifyPermission(permissions.BasePermission):
     def has_permission(self, request, view):
         t = request.user.user_type
-        if request.method not in permissions.SAFE_METHODS and t != 3:
+        if request.method not in permissions.SAFE_METHODS and t != 2:
             return False
         return True
 

@@ -53,7 +53,7 @@ if insert_people:
     })
 
     c.post('/api/register_student', {
-        'username': 'Mary',
+            'username': 'Mary',
         'id_number': 123456789123456877,
         'user_type': 1,
         'email': '11211@126.com',

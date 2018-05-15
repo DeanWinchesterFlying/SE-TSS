@@ -1062,3 +1062,532 @@
 2018-05-09 19:31:54,136 [Thread-6:9472] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/student/?course=21120261&course=21120261&student_id_list=Ben HTTP/1.1" 200 10575
 2018-05-09 19:39:06,281 [Thread-1:5728] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/paper/?course=21120261&course=21120261&paper_id_list=4a5a36b8-5010-11e8-bcba-c48e8f7f190e%22 HTTP/1.1" 500 172318
 2018-05-09 19:39:12,853 [Thread-4:2084] [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/online_testing/analysis/paper/?course=21120261&course=21120261&paper_id_list=4a5a36b8-5010-11e8-bcba-c48e8f7f190e HTTP/1.1" 500 99937
+2018-05-09 19:39:41,742 [Thread-1:8448] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/analysis/paper/?course=21120261&course=21120261&paper_id_list=4a5a36b8-5010-11e8-bcba-c48e8f7f190e HTTP/1.1" 200 10714
+2018-05-09 19:52:06,687 [Thread-2:8396] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-09 20:41:53,007 [Thread-11:11016] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online HTTP/1.1" 404 9332
+2018-05-09 20:41:59,154 [Thread-17:9824] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-09 20:42:01,286 [Thread-18:10268] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/ HTTP/1.1" 200 10359
+2018-05-09 21:01:35,055 [Thread-24:3028] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 11376
+2018-05-13 14:27:49,630 [Thread-1:3316] [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2142
+2018-05-13 14:27:50,032 [Thread-3:6060] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2193
+2018-05-13 14:27:53,742 [Thread-8:8716] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/users/ HTTP/1.1" 404 9332
+2018-05-13 14:27:57,148 [Thread-9:8108] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/login HTTP/1.1" 405 11703
+2018-05-13 14:28:05,112 [Thread-16:7076] [django:166] [views:post] [INFO]- try to login
+2018-05-13 14:28:05,284 [Thread-16:7076] [django:191] [views:post] [INFO]- login failed
+2018-05-13 14:28:05,320 [Thread-16:7076] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-13 14:28:11,936 [Thread-17:928] [django:166] [views:post] [INFO]- try to login
+2018-05-13 14:28:12,060 [Thread-17:928] [django:191] [views:post] [INFO]- login failed
+2018-05-13 14:28:12,096 [Thread-17:928] [django.server:124] [basehttp:log_message] [WARNING]- "POST /api/login HTTP/1.1" 401 11739
+2018-05-13 14:29:17,452 [Thread-18:1700] [django:166] [views:post] [INFO]- try to login
+2018-05-13 14:29:17,860 [Thread-18:1700] [django:178] [views:post] [INFO]- login successfully
+2018-05-13 14:29:18,017 [Thread-18:1700] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login HTTP/1.1" 200 11777
+2018-05-13 14:34:27,242 [MainThread:5652] [django:166] [views:post] [INFO]- try to login
+2018-05-13 14:34:27,572 [MainThread:5652] [django:178] [views:post] [INFO]- login successfully
+2018-05-13 14:34:27,682 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:27,712 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:27,922 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Aabbye
+2018-05-13 14:34:27,932 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:27,952 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:28,252 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Aaron
+2018-05-13 14:34:28,262 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:28,272 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:28,532 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abagael
+2018-05-13 14:34:28,542 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:28,562 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:28,782 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abagail
+2018-05-13 14:34:28,792 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:28,802 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:29,122 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abbe
+2018-05-13 14:34:29,132 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:29,142 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:29,402 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abbey
+2018-05-13 14:34:29,412 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:29,422 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:29,762 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abbi
+2018-05-13 14:34:29,772 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:29,782 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:30,046 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abbie
+2018-05-13 14:34:30,065 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:30,075 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:30,326 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abbott
+2018-05-13 14:34:30,336 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:30,416 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:30,646 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abbra
+2018-05-13 14:34:30,666 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:30,676 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:30,936 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abby
+2018-05-13 14:34:30,936 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:30,946 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:31,191 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abdon
+2018-05-13 14:34:31,191 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:31,201 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:31,441 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abdul
+2018-05-13 14:34:31,451 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:31,461 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:31,751 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abe
+2018-05-13 14:34:31,761 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:31,781 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:32,026 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abel
+2018-05-13 14:34:32,036 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:32,046 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:32,296 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abelard
+2018-05-13 14:34:32,316 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:32,326 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:32,631 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abeni
+2018-05-13 14:34:32,631 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:32,641 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:32,851 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abia
+2018-05-13 14:34:32,871 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:32,901 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:33,165 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abiba
+2018-05-13 14:34:33,165 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:33,175 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:33,415 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Abie
+2018-05-13 14:34:33,425 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:33,435 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:33,645 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Baba
+2018-05-13 14:34:33,655 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:33,665 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:33,945 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Babara
+2018-05-13 14:34:33,945 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:33,955 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:34,158 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Babbette
+2018-05-13 14:34:34,178 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:34,188 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:34,428 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Babette
+2018-05-13 14:34:34,438 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:34,448 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:34,738 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Babs
+2018-05-13 14:34:34,748 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:34,758 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:35,025 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Baby
+2018-05-13 14:34:35,035 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:35,065 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:35,345 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Bahia
+2018-05-13 14:34:35,355 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:35,355 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:35,615 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Bailey
+2018-05-13 14:34:35,625 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:35,645 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:35,936 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Baird
+2018-05-13 14:34:35,945 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:35,955 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:36,226 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Bairn
+2018-05-13 14:34:36,236 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:36,246 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:36,506 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Bakula
+2018-05-13 14:34:36,526 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:36,536 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:37,029 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Baldwin
+2018-05-13 14:34:37,029 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:37,039 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:37,309 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Ballard
+2018-05-13 14:34:37,319 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:37,329 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:37,639 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Balthasar
+2018-05-13 14:34:37,649 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:37,659 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:37,939 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Bambi
+2018-05-13 14:34:37,939 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:37,949 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:38,198 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Bancroft
+2018-05-13 14:34:38,198 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:38,208 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:38,468 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Barak
+2018-05-13 14:34:38,478 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:38,488 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:38,739 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Barb
+2018-05-13 14:34:38,749 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:38,769 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:39,039 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Barbara
+2018-05-13 14:34:39,049 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:39,059 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:39,319 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Barbary
+2018-05-13 14:34:39,339 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:39,349 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:39,779 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Cadence
+2018-05-13 14:34:39,789 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:39,799 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:40,089 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Cady
+2018-05-13 14:34:40,099 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:40,109 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:40,439 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Cael
+2018-05-13 14:34:40,449 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:40,469 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:40,730 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Caesar
+2018-05-13 14:34:40,740 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:40,760 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:41,012 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Cais
+2018-05-13 14:34:41,032 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:41,042 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:41,412 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Caitlin
+2018-05-13 14:34:41,422 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:41,422 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:41,672 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Caitlyn
+2018-05-13 14:34:41,682 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:41,692 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:42,003 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Caius
+2018-05-13 14:34:42,033 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:42,053 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:42,403 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Cal
+2018-05-13 14:34:42,403 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:42,413 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:42,743 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Cala
+2018-05-13 14:34:42,753 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:42,763 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:43,024 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Calandra
+2018-05-13 14:34:43,044 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:43,054 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:43,344 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Calantha
+2018-05-13 14:34:43,354 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:43,364 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:43,824 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Calder
+2018-05-13 14:34:43,844 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:43,854 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:44,135 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Caldwell
+2018-05-13 14:34:44,145 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:44,145 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:44,405 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Caleb
+2018-05-13 14:34:44,415 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:44,435 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:44,774 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Calhoun
+2018-05-13 14:34:44,796 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:44,817 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:45,066 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Calida
+2018-05-13 14:34:45,084 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:45,092 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:45,371 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Calista
+2018-05-13 14:34:45,387 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:45,393 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:45,666 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Calix
+2018-05-13 14:34:45,676 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:45,686 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:45,959 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Calixte
+2018-05-13 14:34:45,971 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:45,987 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:46,373 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dacey
+2018-05-13 14:34:46,389 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:46,401 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:46,789 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dafydd
+2018-05-13 14:34:46,797 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:46,801 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:47,052 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dag
+2018-05-13 14:34:47,064 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:47,073 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:47,463 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dagmar
+2018-05-13 14:34:47,471 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:47,487 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:47,803 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dahila
+2018-05-13 14:34:47,813 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:47,823 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:48,070 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dahlia
+2018-05-13 14:34:48,070 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:48,080 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:48,360 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Daibhidh
+2018-05-13 14:34:48,370 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:48,380 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:48,783 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Daisy
+2018-05-13 14:34:48,793 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:48,803 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:49,038 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dakota
+2018-05-13 14:34:49,058 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:49,068 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:49,328 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dale
+2018-05-13 14:34:49,348 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:49,358 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:49,397 [Thread-19:8308] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/student HTTP/1.1" 301 0
+2018-05-13 14:34:49,644 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Daley
+2018-05-13 14:34:49,651 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:49,656 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:49,829 [Thread-20:8552] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/student/ HTTP/1.1" 200 54329
+2018-05-13 14:34:49,943 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dalia
+2018-05-13 14:34:49,951 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:49,960 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:50,279 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dalila
+2018-05-13 14:34:50,289 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:50,309 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:50,640 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dalit
+2018-05-13 14:34:50,652 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:50,668 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:50,997 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dallas
+2018-05-13 14:34:51,014 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:51,028 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:51,369 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dalston
+2018-05-13 14:34:51,381 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:51,389 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:51,659 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dalton
+2018-05-13 14:34:51,671 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:51,683 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:51,980 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Dalva
+2018-05-13 14:34:51,988 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:51,998 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:52,268 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Damaris
+2018-05-13 14:34:52,278 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:52,298 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:52,858 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Damia
+2018-05-13 14:34:52,890 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:53,083 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:53,517 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Eadweard
+2018-05-13 14:34:53,527 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:53,537 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:53,841 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Eager
+2018-05-13 14:34:53,849 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:53,861 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:54,100 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Earl
+2018-05-13 14:34:54,110 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:54,130 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:54,390 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Earlean
+2018-05-13 14:34:54,400 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:54,410 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:54,720 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Earlene
+2018-05-13 14:34:54,730 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:54,740 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:54,960 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Earley
+2018-05-13 14:34:54,981 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:54,991 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:55,296 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Earline
+2018-05-13 14:34:55,315 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:55,325 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:55,626 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Early
+2018-05-13 14:34:55,635 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:55,655 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:55,895 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Earnestine
+2018-05-13 14:34:55,915 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:55,925 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:56,242 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Eartha
+2018-05-13 14:34:56,242 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:56,262 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:56,492 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Easter
+2018-05-13 14:34:56,502 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:56,512 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:56,772 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Easton
+2018-05-13 14:34:56,782 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:56,792 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:57,084 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Ebenezer
+2018-05-13 14:34:57,100 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:57,124 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:57,383 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Eboni
+2018-05-13 14:34:57,393 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:57,403 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:57,673 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Ebony
+2018-05-13 14:34:57,683 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:57,693 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:57,923 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Ed
+2018-05-13 14:34:57,933 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:57,953 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:58,208 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Eddie
+2018-05-13 14:34:58,218 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:58,228 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:58,678 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Eddy
+2018-05-13 14:34:58,678 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:58,688 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:58,967 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Eden
+2018-05-13 14:34:58,975 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:58,979 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:59,250 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Edgar
+2018-05-13 14:34:59,261 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:59,270 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:59,511 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fabian
+2018-05-13 14:34:59,531 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:59,541 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:34:59,791 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fabiola
+2018-05-13 14:34:59,801 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:34:59,821 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:00,255 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fabion
+2018-05-13 14:35:00,275 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:00,291 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:00,739 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fachnan
+2018-05-13 14:35:00,755 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:00,775 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:01,059 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fachtna
+2018-05-13 14:35:01,067 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:01,087 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:01,522 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fae
+2018-05-13 14:35:01,532 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:01,542 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:01,874 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Faie
+2018-05-13 14:35:01,894 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:01,904 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:02,170 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fainche
+2018-05-13 14:35:02,180 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:02,190 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:02,432 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fairfax
+2018-05-13 14:35:02,440 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:02,444 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:02,752 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fairie
+2018-05-13 14:35:02,772 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:02,784 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:03,335 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fairy
+2018-05-13 14:35:03,345 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:03,365 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:03,692 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Faith
+2018-05-13 14:35:03,700 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:03,716 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:04,168 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Faithe
+2018-05-13 14:35:04,182 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:04,192 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:04,664 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Falecia
+2018-05-13 14:35:04,680 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:04,708 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:05,042 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Falk
+2018-05-13 14:35:05,046 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:05,054 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:05,266 [Thread-25:3816] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/student/ HTTP/1.1" 200 77681
+2018-05-13 14:35:05,326 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Falkner
+2018-05-13 14:35:05,334 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:05,346 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:05,674 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fallon
+2018-05-13 14:35:05,682 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:05,690 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:05,975 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fanni
+2018-05-13 14:35:05,981 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:05,991 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:06,297 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fannie
+2018-05-13 14:35:06,309 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:06,321 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:06,792 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Fanny
+2018-05-13 14:35:06,800 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:06,832 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:07,378 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gabby
+2018-05-13 14:35:07,385 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:07,390 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:07,613 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gabe
+2018-05-13 14:35:07,623 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:07,643 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:07,985 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gabriel
+2018-05-13 14:35:07,997 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:08,005 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:08,290 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gabriella
+2018-05-13 14:35:08,309 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:08,318 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:08,643 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gabrielle
+2018-05-13 14:35:08,647 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:08,655 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:08,934 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gaetan
+2018-05-13 14:35:08,954 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:08,976 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:09,346 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gaetane
+2018-05-13 14:35:09,346 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:09,356 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:09,586 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gafna
+2018-05-13 14:35:09,606 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:09,620 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:10,068 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gage
+2018-05-13 14:35:10,072 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:10,082 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:10,323 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gaia
+2018-05-13 14:35:10,327 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:10,331 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:10,562 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gaige
+2018-05-13 14:35:10,582 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:10,592 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:10,876 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gail
+2018-05-13 14:35:10,892 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:10,908 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:11,408 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gaius
+2018-05-13 14:35:11,416 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:11,420 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:11,693 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Galdys
+2018-05-13 14:35:11,703 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:11,723 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:12,018 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gale
+2018-05-13 14:35:12,028 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:12,055 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:12,311 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Galen
+2018-05-13 14:35:12,321 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:12,331 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:12,671 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gali
+2018-05-13 14:35:12,681 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:12,691 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:12,986 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Galina
+2018-05-13 14:35:12,996 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:12,996 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:13,231 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gallagher
+2018-05-13 14:35:13,241 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:13,251 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:13,581 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Gallia
+2018-05-13 14:35:13,591 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:13,611 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:13,871 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hachilah
+2018-05-13 14:35:13,901 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:13,911 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:14,186 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hadassah
+2018-05-13 14:35:14,186 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:14,196 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:14,436 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Haden
+2018-05-13 14:35:14,446 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:14,456 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:14,796 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hadenna
+2018-05-13 14:35:14,816 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:14,826 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:15,085 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hadley
+2018-05-13 14:35:15,105 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:15,185 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:15,448 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Haeleigh
+2018-05-13 14:35:15,458 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:15,458 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:15,738 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Haesel
+2018-05-13 14:35:15,748 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:15,758 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:16,028 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hagar
+2018-05-13 14:35:16,038 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:16,058 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:16,308 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Haggith
+2018-05-13 14:35:16,318 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:16,338 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:16,638 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Haile
+2018-05-13 14:35:16,658 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:16,678 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:17,000 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hakeem
+2018-05-13 14:35:17,010 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:17,020 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:17,330 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hal
+2018-05-13 14:35:17,340 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:17,350 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:17,660 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hale
+2018-05-13 14:35:17,670 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:17,690 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:18,160 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Haley
+2018-05-13 14:35:18,170 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:18,190 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:18,470 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Halfrith
+2018-05-13 14:35:18,470 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:18,480 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:18,720 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Halfryta
+2018-05-13 14:35:18,730 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:18,740 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:19,011 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Hall
+2018-05-13 14:35:19,021 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:19,041 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-13 14:35:19,281 [MainThread:5652] [django:31] [views:post] [INFO]- account register successfully, username:Halle
+2018-05-13 14:35:19,291 [MainThread:5652] [django:27] [views:post] [INFO]- try to register student account
+2018-05-13 14:35:19,301 [MainThread:5652] [django:29] [serializers:create] [INFO]- create account
+2018-05-14 19:11:45,820 [Thread-1:10160] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/paper/ HTTP/1.1" 401 9665
+2018-05-14 19:11:45,861 [Thread-3:9936] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-05-14 19:11:45,862 [Thread-4:10500] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2018-05-14 19:11:45,866 [Thread-5:11728] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2018-05-14 19:11:45,868 [Thread-7:7420] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2018-05-14 19:11:45,875 [Thread-6:3268] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2018-05-14 19:11:45,891 [Thread-8:12228] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2018-05-14 19:11:45,901 [Thread-10:9992] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2018-05-14 19:11:45,903 [Thread-9:824] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-05-14 19:11:45,915 [Thread-11:12244] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+2018-05-14 19:11:45,928 [Thread-12:11344] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-05-14 19:11:46,053 [Thread-13:6904] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2018-05-14 19:11:46,200 [Thread-14:10328] [django.server:124] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2193
+2018-05-14 19:11:50,094 [Thread-15:8936] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/login HTTP/1.1" 401 8156
+2018-05-14 19:11:54,293 [Thread-21:11644] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/get_token HTTP/1.1" 405 12055
+2018-05-14 19:12:01,486 [Thread-22:11492] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/get_token HTTP/1.1" 405 12055
+2018-05-14 19:12:09,427 [Thread-28:9800] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/get_token HTTP/1.1" 200 12183
+2018-05-14 19:12:14,264 [Thread-29:6800] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/ HTTP/1.1" 401 9698
+2018-05-14 19:12:15,224 [Thread-30:6400] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/ HTTP/1.1" 401 9698
+2018-05-14 19:12:15,269 [Thread-31:3524] [django.server:124] [basehttp:log_message] [INFO]- "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-05-14 19:12:19,657 [Thread-32:11868] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-14 19:12:22,287 [Thread-33:2564] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/ HTTP/1.1" 401 9698
+2018-05-14 19:12:22,530 [Thread-39:1192] [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1744
+2018-05-14 19:19:24,437 [Thread-40:12268] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/ HTTP/1.1" 401 58
+2018-05-14 19:19:40,685 [Thread-41:11660] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/ HTTP/1.1" 401 58
+2018-05-14 19:20:28,625 [Thread-42:10172] [django.server:124] [basehttp:log_message] [INFO]- "POST /api/get_token HTTP/1.1" 200 193
+2018-05-14 19:21:18,935 [Thread-43:10872] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 768
+2018-05-14 19:21:33,987 [Thread-44:10048] [django.server:124] [basehttp:log_message] [INFO]- "GET /api/online_testing/question/ HTTP/1.1" 200 768
+2018-05-14 19:21:37,897 [Thread-45:11216] [django.server:124] [basehttp:log_message] [WARNING]- "GET /api/online_testing/question/ HTTP/1.1" 401 58
